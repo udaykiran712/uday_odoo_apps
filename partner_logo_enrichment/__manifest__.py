@@ -20,7 +20,7 @@ Key Features:
 - Multi-Record "Fetch Partner Logos" Bulk Server Action in Contacts List/Form views
 - Smart HTTP 404 Not Found handling to prevent infinite cron retry loops
     """,
-    'author': 'Uday Odoo Apps',
+    'author': 'Gardas Udaykiran',
     'website': 'https://www.linkedin.com/in/udaykirangardas/',
     'license': 'LGPL-3',
     'depends': [
