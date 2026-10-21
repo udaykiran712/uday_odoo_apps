@@ -1,781 +1,457 @@
-<section
-        style="font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2b2743;max-width:880px;margin:0 auto;">
+<section class="oe_container" style="font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#2b2743;max-width:880px;margin:0 auto;">
 
-    <!-- ============================================================ -->
-    <!-- HERO                                                         -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin-bottom:8px;">
-        <img src="banner.gif" alt="Partner Logo Enrichment (Logo.dev) for Odoo 18"
-             style="max-width:100%;border-radius:22px;box-shadow:0 14px 44px rgba(99,102,241,0.28);"/>
-        <h1 style="font-size:36px;font-weight:800;margin:26px 0 8px;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            Partner Logo Enrichment (Logo.dev)</h1>
-        <p style="font-size:16px;color:#6b7091;max-width:640px;margin:0 auto 14px;line-height:1.65;">Automatically fetch
-            and enrich Odoo 18 partner records with high-resolution company &amp; brand logos from Website or Email
-            domains — with a 1-click API connection tester, instant smart button, real-time save hooks, bulk server
-            actions, and a 15-minute background cron queue.</p>
-        <div style="margin-bottom:14px;">
-            <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#eef0ff;color:#4f46e5;">Odoo 18.0</span>
-            <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#f5eaff;color:#9333ea;">LGPL-3</span>
-            <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#dcfce7;color:#15803d;">100% Free</span>
-            <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#e0f7fa;color:#0e7490;">1-Click API Test Connection</span>
-            <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#fde8f3;color:#db2777;">Website &amp; Email Domains</span>
-            <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#fef3c7;color:#b45309;">Real-Time &amp; Cron Modes</span>
-        </div>
-        <div style="font-size:13px;color:#6b7091;">
-            by <a href="https://www.linkedin.com/in/udaykirangardas/" target="_blank" rel="noopener"
-                  style="color:#6366f1;font-weight:700;text-decoration:none;">Gardas Udaykiran</a>
-            &nbsp;&middot;&nbsp;
-            <a href="https://apps.odoo.com/apps/browse?repo_maintainer_id=1184648" target="_blank" rel="noopener"
-               style="color:#6366f1;font-weight:700;text-decoration:none;">More apps</a>
-            &nbsp;&middot;&nbsp;
-            <a href="https://github.com/udaykiran712/uday_odoo_apps" target="_blank" rel="noopener"
-               style="color:#6366f1;font-weight:700;text-decoration:none;">GitHub</a>
-            &nbsp;&middot;&nbsp;
-            <a href="https://www.linkedin.com/in/udaykirangardas/" target="_blank" rel="noopener"
-               style="color:#6366f1;font-weight:700;text-decoration:none;">LinkedIn</a>
-            &nbsp;&middot;&nbsp;
-            <a href="mailto:gardasudaykiran2001@gmail.com" style="color:#6366f1;font-weight:700;text-decoration:none;">Email</a>
-        </div>
+  <!-- ============================================================ -->
+  <!-- HERO                                                         -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin-bottom:8px;">
+    <img src="banner.gif" alt="Partner Logo Enrichment (Logo.dev) for Odoo 18" class="img img-fluid" style="max-width:100%;border-radius:22px;border:1px solid #dfe2ff;"/>
+    <h1 style="font-size:36px;font-weight:800;margin:26px 0 8px;color:#4f46e5;">Partner Logo Enrichment (Logo.dev)</h1>
+    <p style="font-size:16px;color:#6b7091;max-width:640px;margin:0 auto 16px;line-height:1.65;">Automatically fetch and enrich Odoo 18 partner records with high-resolution company &amp; brand logos from Website or Email domains &mdash; with a 1-click API connection tester, instant smart button, real-time save hooks, bulk server actions, and a 15-minute background cron queue.</p>
+    <div style="margin-bottom:16px;">
+      <span style="display:inline-block;padding:6px 14px;margin:4px;border-radius:50px;font-size:12.5px;font-weight:700;background-color:#eef0ff;color:#4f46e5;border:1px solid #c7d2fe;"><i class="fa fa-check-circle"></i> Odoo 18.0</span>
+      <span style="display:inline-block;padding:6px 14px;margin:4px;border-radius:50px;font-size:12.5px;font-weight:700;background-color:#f5eaff;color:#9333ea;border:1px solid #e9d5ff;"><i class="fa fa-balance-scale"></i> LGPL-3</span>
+      <span style="display:inline-block;padding:6px 14px;margin:4px;border-radius:50px;font-size:12.5px;font-weight:700;background-color:#dcfce7;color:#15803d;border:1px solid #bbf7d0;"><i class="fa fa-unlock"></i> 100% Free</span>
+      <span style="display:inline-block;padding:6px 14px;margin:4px;border-radius:50px;font-size:12.5px;font-weight:700;background-color:#e0f7fa;color:#0e7490;border:1px solid #a5f3fc;"><i class="fa fa-plug"></i> 1-Click API Test Connection</span>
+      <span style="display:inline-block;padding:6px 14px;margin:4px;border-radius:50px;font-size:12.5px;font-weight:700;background-color:#fde8f3;color:#db2777;border:1px solid #fbcfe8;"><i class="fa fa-globe"></i> Website &amp; Email Domains</span>
+      <span style="display:inline-block;padding:6px 14px;margin:4px;border-radius:50px;font-size:12.5px;font-weight:700;background-color:#fef3c7;color:#b45309;border:1px solid #fde68a;"><i class="fa fa-bolt"></i> Real-Time &amp; Cron Modes</span>
     </div>
-
-    <div style="margin:44px 0;"><img src="divider.gif" alt=""
-                                     style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
-
-    <!-- ============================================================ -->
-    <!-- FEATURES (8-CARD COLORFUL PASTEL GRID)                       -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin:0px 0 22px;">
-        <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#6366f1;margin-bottom:6px;">
-            Features
-        </div>
-        <h2 style="font-size:26px;font-weight:800;margin:0;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            Why this module</h2>
-        <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:580px;line-height:1.6;">Turn grey placeholder
-            avatars into a vibrant, recognizable address book — automatically and safely.</p>
+    <div style="font-size:13.5px;color:#6b7091;">
+      by <a href="https://www.linkedin.com/in/udaykirangardas/" target="_blank" rel="noopener" style="color:#4f46e5;font-weight:700;text-decoration:none;">Gardas Udaykiran</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://apps.odoo.com/apps/browse?repo_maintainer_id=1184648" target="_blank" rel="noopener" style="color:#4f46e5;font-weight:700;text-decoration:none;">More apps</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://github.com/udaykiran712/uday_odoo_apps" target="_blank" rel="noopener" style="color:#4f46e5;font-weight:700;text-decoration:none;">GitHub</a>
+      &nbsp;&middot;&nbsp;
+      <a href="https://www.linkedin.com/in/udaykirangardas/" target="_blank" rel="noopener" style="color:#4f46e5;font-weight:700;text-decoration:none;">LinkedIn</a>
+      &nbsp;&middot;&nbsp;
+      <a href="mailto:gardasudaykiran2001@gmail.com" style="color:#4f46e5;font-weight:700;text-decoration:none;">Email</a>
     </div>
+  </div>
 
-    <table border="0" cellpadding="0" cellspacing="0" width="100%"
-           style="border-collapse:separate;border-spacing:12px;">
-        <tr>
-            <td width="50%"
-                style="background:#f4f5ff;border:1px solid #dfe2ff;border-top:4px solid #6366f1;border-radius:16px;padding:20px;vertical-align:top;">
-                <div style="font-size:26px;margin-bottom:8px;">🌐</div>
-                <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">Smart domain extraction
-                </div>
-                <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Extracts and normalizes domains from the
-                    partner’s <code>website</code> (stripping <code>http://</code>, <code>https://</code>,
-                    <code>www.</code>, ports, and URL paths) or falls back to their <code>email</code> domain (<code>@domain.com</code>).
-                </div>
-            </td>
-            <td width="50%"
-                style="background:#f0f9ff;border:1px solid #bae6fd;border-top:4px solid #0ea5e9;border-radius:16px;padding:20px;vertical-align:top;">
-                <div style="font-size:26px;margin-bottom:8px;">🔌</div>
-                <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">1-Click API “Test
-                    Connection”
-                </div>
-                <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Verify your Logo.dev Publishable Key
-                    (<code>pk_...</code>) right inside <strong>Settings → General Settings → Contacts</strong>.
-                    Auto-saves your key and shows a live green connection toast.
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td width="50%"
-                style="background:#fff0f7;border:1px solid #fbd0e6;border-top:4px solid #ec4899;border-radius:16px;padding:20px;vertical-align:top;">
-                <div style="font-size:26px;margin-bottom:8px;">⚡</div>
-                <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">Dual execution modes</div>
-                <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Run in non-blocking <strong>Background
-                    Cron Mode</strong> (every 15 minutes in batches of 50) or enable <strong>Immediate Logo
-                    Fetch</strong> in Settings to enrich contacts the instant they are saved.
-                </div>
-            </td>
-            <td width="50%"
-                style="background:#f8f0ff;border:1px solid #e8d3fb;border-top:4px solid #a855f7;border-radius:16px;padding:20px;vertical-align:top;">
-                <div style="font-size:26px;margin-bottom:8px;">🖼️</div>
-                <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">One-click “Fetch Logo”
-                    button
-                </div>
-                <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Adds a native <strong>Fetch Logo</strong>
-                    stat button directly inside the Partner Form button box whenever a website or email is present —
-                    with instant toast feedback and automatic view reload.
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td width="50%"
-                style="background:#effcff;border:1px solid #c4eef5;border-top:4px solid #06b6d4;border-radius:16px;padding:20px;vertical-align:top;">
-                <div style="font-size:26px;margin-bottom:8px;">📦</div>
-                <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">Bulk server action</div>
-                <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Select dozens or hundreds of contacts in
-                    the Partner List view and click <strong>Action → Fetch Partner Logos</strong> to enrich existing
-                    records in one batch with a live summary toast.
-                </div>
-            </td>
-            <td width="50%"
-                style="background:#fffaeb;border:1px solid #fde7a8;border-top:4px solid #f59e0b;border-radius:16px;padding:20px;vertical-align:top;">
-                <div style="font-size:26px;margin-bottom:8px;">🛡️</div>
-                <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">404 infinite-loop
-                    protection
-                </div>
-                <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Tracks lookup status (<code>pending</code>,
-                    <code>fetched</code>, <code>not_found</code>, <code>failed</code>) and clears the pending flag on
-                    HTTP 404 responses so unknown domains are never retried endlessly.
-                </div>
-            </td>
-        </tr>
-        <tr>
-            <td width="50%"
-                style="background:#effdf5;border:1px solid #c3f0d6;border-top:4px solid #10b981;border-radius:16px;padding:20px;vertical-align:top;">
-                <div style="font-size:26px;margin-bottom:8px;">🔒</div>
-                <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">Preserves existing custom
-                    avatars
-                </div>
-                <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Automatic <code>create()</code>, <code>write()</code>,
-                    and cron hooks only fetch a logo when <code>image_1920</code> is empty — never overwriting photos
-                    uploaded manually by your team.
-                </div>
-            </td>
-            <td width="50%"
-                style="background:#fff1f2;border:1px solid #fecdd3;border-top:4px solid #f43f5e;border-radius:16px;padding:20px;vertical-align:top;">
-                <div style="font-size:26px;margin-bottom:8px;">🔄</div>
-                <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">Auto-resized Odoo
-                    thumbnails
-                </div>
-                <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Writes directly to Odoo’s native <code>image_1920</code>
-                    field on <code>res.partner</code>, so <code>image.mixin</code> automatically generates <code>image_1024</code>,
-                    <code>image_512</code>, <code>image_256</code>, and <code>avatar_128</code>.
-                </div>
-            </td>
-        </tr>
+  <div style="margin:40px 0;"><img src="divider.gif" alt="" class="img img-fluid" style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
+
+  <!-- ============================================================ -->
+  <!-- FEATURES (8-CARD COLORFUL PASTEL GRID)                       -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin:0 0 22px;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#6366f1;margin-bottom:6px;">Features</div>
+    <h2 style="font-size:26px;font-weight:800;margin:0;color:#2b2743;">Why this module</h2>
+    <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:580px;line-height:1.6;">Turn grey placeholder avatars into a vibrant, recognizable address book &mdash; automatically and safely.</p>
+  </div>
+
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate;border-spacing:12px;">
+    <tr>
+      <td width="50%" style="background-color:#f4f5ff;border:1px solid #dfe2ff;border-top:4px solid #6366f1;border-radius:16px;padding:20px;vertical-align:top;">
+        <div style="display:inline-block;width:40px;height:40px;line-height:40px;border-radius:50%;background-color:#6366f1;color:#ffffff;text-align:center;font-size:18px;margin-bottom:10px;"><i class="fa fa-globe"></i></div>
+        <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">Smart domain extraction</div>
+        <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Extracts and normalizes domains from the partner&rsquo;s <code>website</code> (stripping <code>http://</code>, <code>https://</code>, <code>www.</code>, ports, and URL paths) or falls back to their <code>email</code> domain (<code>@domain.com</code>).</div>
+      </td>
+      <td width="50%" style="background-color:#f0f9ff;border:1px solid #bae6fd;border-top:4px solid #0ea5e9;border-radius:16px;padding:20px;vertical-align:top;">
+        <div style="display:inline-block;width:40px;height:40px;line-height:40px;border-radius:50%;background-color:#0ea5e9;color:#ffffff;text-align:center;font-size:18px;margin-bottom:10px;"><i class="fa fa-plug"></i></div>
+        <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">1-Click API &ldquo;Test Connection&rdquo;</div>
+        <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Verify your Logo.dev Publishable Key (<code>pk_...</code>) right inside <strong>Settings &rarr; General Settings &rarr; Contacts</strong>. Auto-saves your key and shows a live green connection toast.</div>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" style="background-color:#fff0f7;border:1px solid #fbd0e6;border-top:4px solid #ec4899;border-radius:16px;padding:20px;vertical-align:top;">
+        <div style="display:inline-block;width:40px;height:40px;line-height:40px;border-radius:50%;background-color:#ec4899;color:#ffffff;text-align:center;font-size:18px;margin-bottom:10px;"><i class="fa fa-bolt"></i></div>
+        <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">Dual execution modes</div>
+        <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Run in non-blocking <strong>Background Cron Mode</strong> (every 15 minutes in batches of 50) or enable <strong>Immediate Logo Fetch</strong> in Settings to enrich contacts the instant they are saved.</div>
+      </td>
+      <td width="50%" style="background-color:#f8f0ff;border:1px solid #e8d3fb;border-top:4px solid #a855f7;border-radius:16px;padding:20px;vertical-align:top;">
+        <div style="display:inline-block;width:40px;height:40px;line-height:40px;border-radius:50%;background-color:#a855f7;color:#ffffff;text-align:center;font-size:18px;margin-bottom:10px;"><i class="fa fa-picture-o"></i></div>
+        <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">One-click &ldquo;Fetch Logo&rdquo; button</div>
+        <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Adds a native <strong>Fetch Logo</strong> stat button directly inside the Partner Form button box whenever a website or email is present &mdash; with instant toast feedback and automatic view reload.</div>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" style="background-color:#effcff;border:1px solid #c4eef5;border-top:4px solid #06b6d4;border-radius:16px;padding:20px;vertical-align:top;">
+        <div style="display:inline-block;width:40px;height:40px;line-height:40px;border-radius:50%;background-color:#06b6d4;color:#ffffff;text-align:center;font-size:18px;margin-bottom:10px;"><i class="fa fa-tasks"></i></div>
+        <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">Bulk server action</div>
+        <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Select dozens or hundreds of contacts in the Partner List view and click <strong>Action &rarr; Fetch Partner Logos</strong> to enrich existing records in one batch with a live summary toast.</div>
+      </td>
+      <td width="50%" style="background-color:#fffaeb;border:1px solid #fde7a8;border-top:4px solid #f59e0b;border-radius:16px;padding:20px;vertical-align:top;">
+        <div style="display:inline-block;width:40px;height:40px;line-height:40px;border-radius:50%;background-color:#f59e0b;color:#ffffff;text-align:center;font-size:18px;margin-bottom:10px;"><i class="fa fa-shield"></i></div>
+        <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">404 infinite-loop protection</div>
+        <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Tracks lookup status (<code>pending</code>, <code>fetched</code>, <code>not_found</code>, <code>failed</code>) and clears the pending flag on HTTP 404 responses so unknown domains are never retried endlessly.</div>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" style="background-color:#effdf5;border:1px solid #c3f0d6;border-top:4px solid #10b981;border-radius:16px;padding:20px;vertical-align:top;">
+        <div style="display:inline-block;width:40px;height:40px;line-height:40px;border-radius:50%;background-color:#10b981;color:#ffffff;text-align:center;font-size:18px;margin-bottom:10px;"><i class="fa fa-lock"></i></div>
+        <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">Preserves existing custom avatars</div>
+        <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Automatic <code>create()</code>, <code>write()</code>, and cron hooks only fetch a logo when <code>image_1920</code> is empty &mdash; never overwriting photos uploaded manually by your team.</div>
+      </td>
+      <td width="50%" style="background-color:#fff1f2;border:1px solid #fecdd3;border-top:4px solid #f43f5e;border-radius:16px;padding:20px;vertical-align:top;">
+        <div style="display:inline-block;width:40px;height:40px;line-height:40px;border-radius:50%;background-color:#f43f5e;color:#ffffff;text-align:center;font-size:18px;margin-bottom:10px;"><i class="fa fa-refresh"></i></div>
+        <div style="font-weight:800;font-size:15px;margin-bottom:6px;color:#2b2743;">Auto-resized Odoo thumbnails</div>
+        <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Writes directly to Odoo&rsquo;s native <code>image_1920</code> field on <code>res.partner</code>, so <code>image.mixin</code> automatically generates <code>image_1024</code>, <code>image_512</code>, <code>image_256</code>, and <code>avatar_128</code>.</div>
+      </td>
+    </tr>
+  </table>
+
+  <div style="margin:40px 0;"><img src="divider.gif" alt="" class="img img-fluid" style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
+
+  <!-- ============================================================ -->
+  <!-- SEE IT IN ACTION                                             -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin:0 0 22px;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#9333ea;margin-bottom:6px;">Walkthrough</div>
+    <h2 style="font-size:26px;font-weight:800;margin:0;color:#2b2743;">See it in action</h2>
+    <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:580px;line-height:1.6;">From testing your Logo.dev API key in Settings to one-click and bulk partner enrichment.</p>
+  </div>
+  <div style="text-align:center;">
+    <img src="enrichment_preview.gif" alt="Partner Logo Enrichment live walkthrough" class="img img-fluid" style="max-width:100%;border-radius:18px;border:1px solid #e8e6fb;"/>
+    <div style="text-align:center;margin-top:14px;">
+      <span style="display:inline-block;padding:6px 14px;margin:4px;border-radius:50px;font-size:12px;font-weight:700;background-color:#eef0ff;color:#4f46e5;border:1px solid #c7d2fe;"><i class="fa fa-plug"></i> 1. Settings &rarr; Test Connection</span>
+      <span style="display:inline-block;padding:6px 14px;margin:4px;border-radius:50px;font-size:12px;font-weight:700;background-color:#f5eaff;color:#9333ea;border:1px solid #e9d5ff;"><i class="fa fa-globe"></i> 2. Enter Website or Email</span>
+      <span style="display:inline-block;padding:6px 14px;margin:4px;border-radius:50px;font-size:12px;font-weight:700;background-color:#dcfce7;color:#15803d;border:1px solid #bbf7d0;"><i class="fa fa-picture-o"></i> 3. Click Fetch Logo / Auto-Save</span>
+      <span style="display:inline-block;padding:6px 14px;margin:4px;border-radius:50px;font-size:12px;font-weight:700;background-color:#fef3c7;color:#b45309;border:1px solid #fde68a;"><i class="fa fa-tasks"></i> 4. Bulk Action &amp; 15-Min Cron</span>
+    </div>
+  </div>
+
+  <div style="margin:40px 0;"><img src="divider.gif" alt="" class="img img-fluid" style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
+
+  <!-- ============================================================ -->
+  <!-- HOW IT WORKS                                                 -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin:0 0 22px;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#db2777;margin-bottom:6px;">Flow</div>
+    <h2 style="font-size:26px;font-weight:800;margin:0;color:#2b2743;">How it works</h2>
+    <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:560px;line-height:1.6;">Four automated steps from domain parsing to high-resolution avatar generation.</p>
+  </div>
+  <div style="text-align:center;">
+    <img src="how_it_works.gif" alt="How Partner Logo Enrichment works: Extract, Query, Save, Sync" class="img img-fluid" style="max-width:100%;border-radius:18px;border:1px solid #e8e6fb;"/>
+  </div>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate;border-spacing:10px;margin-top:6px;">
+    <tr>
+      <td width="25%" style="background-color:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #6366f1;border-radius:14px;padding:14px 14px 16px;vertical-align:top;">
+        <div style="font-weight:800;font-size:14px;color:#2b2743;margin-bottom:5px;">1. Extract</div>
+        <div style="font-size:12.5px;color:#6b7091;line-height:1.6;">Reads <code>website</code> first (or falls back to <code>email</code>) and strips protocols, <code>www.</code>, ports, and paths to isolate the clean domain.</div>
+      </td>
+      <td width="25%" style="background-color:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #a855f7;border-radius:14px;padding:14px 14px 16px;vertical-align:top;">
+        <div style="font-weight:800;font-size:14px;color:#2b2743;margin-bottom:5px;">2. Verify &amp; Query</div>
+        <div style="font-size:12.5px;color:#6b7091;line-height:1.6;">Uses your verified <code>pk_...</code> key to call <code>https://img.logo.dev/{domain}</code> with <code>format=png</code>, <code>size=200</code>, and a 10s timeout.</div>
+      </td>
+      <td width="25%" style="background-color:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #ec4899;border-radius:14px;padding:14px 14px 16px;vertical-align:top;">
+        <div style="font-weight:800;font-size:14px;color:#2b2743;margin-bottom:5px;">3. Enrich</div>
+        <div style="font-size:12.5px;color:#6b7091;line-height:1.6;">Base64-encodes the PNG binary into <code>image_1920</code>, automatically computing all Odoo avatar thumbnails.</div>
+      </td>
+      <td width="25%" style="background-color:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #10b981;border-radius:14px;padding:14px 14px 16px;vertical-align:top;">
+        <div style="font-weight:800;font-size:14px;color:#2b2743;margin-bottom:5px;">4. Track Status</div>
+        <div style="font-size:12.5px;color:#6b7091;line-height:1.6;">Sets <code>logo_fetch_status</code> to <code>fetched</code>, <code>not_found</code>, or <code>failed</code> and clears <code>logo_fetch_pending</code>.</div>
+      </td>
+    </tr>
+  </table>
+
+  <div style="margin:40px 0;"><img src="divider.gif" alt="" class="img img-fluid" style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
+
+  <!-- ============================================================ -->
+  <!-- RELIABILITY & ARCHITECTURE IN DETAIL                         -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin:0 0 22px;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#9333ea;margin-bottom:6px;">Architecture</div>
+    <h2 style="font-size:26px;font-weight:800;margin:0;color:#2b2743;">Reliability, in detail</h2>
+    <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:560px;line-height:1.6;">Engineered for real production databases &mdash; what actually happens under the hood.</p>
+  </div>
+  <div style="background-color:#14112b;border-radius:22px;overflow:hidden;border:1px solid #2d2860;padding-bottom:8px;">
+    <img src="reliability_banner.gif" alt="Built-in ORM reliability and safeguards" class="img img-fluid" style="width:100%;display:block;"/>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate;border-spacing:12px;">
+      <tr>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
+          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#6366f1;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>1-Click API connection tester</div>
+          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">Built-in <code style="color:#a5b4fc;">action_test_logo_dev_connection()</code> in Settings auto-persists your typed key and tests live connectivity against <code style="color:#a5b4fc;">img.logo.dev</code>.</div>
+        </td>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
+          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#a855f7;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Recursion-safe context guard</div>
+          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">All internal updates use <code style="color:#a5b4fc;">with_context(skip_logo_fetch=True)</code> so writing <code style="color:#a5b4fc;">image_1920</code> never re-triggers <code style="color:#a5b4fc;">write()</code> recursively.</div>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
+          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#ec4899;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Smart 404 handling</div>
+          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">When Logo.dev returns HTTP 404, the partner is marked <code style="color:#a5b4fc;">not_found</code> and <code style="color:#a5b4fc;">logo_fetch_pending=False</code> to prevent endless cron retries.</div>
+        </td>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
+          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#06b6d4;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Bounded 50-record cron batches</div>
+          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">The 15-minute scheduled action processes up to 50 pending partners per run so worker threads never hit timeouts on large imports.</div>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
+          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#f59e0b;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Multi-record &amp; batch safe</div>
+          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">Uses <code style="color:#a5b4fc;">@api.model_create_multi</code> and iterates recordsets safely in <code style="color:#a5b4fc;">write()</code> and <code style="color:#a5b4fc;">action_fetch_logo()</code> without singleton errors.</div>
+        </td>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
+          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#10b981;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Instant UI toast &amp; soft reload</div>
+          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">Manual fetches return a <code style="color:#a5b4fc;">display_notification</code> client action chained with <code style="color:#a5b4fc;">soft_reload</code> so the new logo appears immediately.</div>
+        </td>
+      </tr>
     </table>
+  </div>
 
-    <div style="margin:44px 0;"><img src="divider.gif" alt=""
-                                     style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
+  <div style="margin:40px 0;"><img src="divider.gif" alt="" class="img img-fluid" style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
 
-    <!-- ============================================================ -->
-    <!-- SEE IT IN ACTION                                             -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin:0px 0 22px;">
-        <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#a855f7;margin-bottom:6px;">
-            Walkthrough
-        </div>
-        <h2 style="font-size:26px;font-weight:800;margin:0;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            See it in action</h2>
-        <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:580px;line-height:1.6;">From testing your
-            Logo.dev API key in Settings to one-click and bulk partner enrichment.</p>
+  <!-- ============================================================ -->
+  <!-- CONFIGURATION                                                -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin:0 0 22px;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#d97706;margin-bottom:6px;">Settings</div>
+    <h2 style="font-size:26px;font-weight:800;margin:0;color:#2b2743;">You stay in control</h2>
+    <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:560px;line-height:1.6;">Simple configuration under <strong>Settings &rarr; General Settings &rarr; Contacts</strong>.</p>
+  </div>
+  <div style="border:1px solid #e8e6fb;border-radius:16px;overflow:hidden;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-size:13.5px;">
+      <tr style="background-color:#4f46e5;">
+        <th style="padding:12px 14px;text-align:left;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:#ffffff;background-color:#4f46e5;">Setting / Component</th>
+        <th style="padding:12px 14px;text-align:left;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:#ffffff;background-color:#4f46e5;">What it controls</th>
+        <th style="padding:12px 14px;text-align:center;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:#ffffff;background-color:#4f46e5;">Default</th>
+        <th style="padding:12px 14px;text-align:center;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:#ffffff;background-color:#4f46e5;">Technical Key</th>
+      </tr>
+      <tr style="background-color:#faf9ff;">
+        <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Logo.dev API Key</td>
+        <td style="padding:12px 14px;color:#6b7091;">Publishable key (<code>pk_...</code>) used to authenticate requests to <code>img.logo.dev</code></td>
+        <td style="padding:12px 14px;text-align:center;font-weight:700;color:#4f46e5;">Empty</td>
+        <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>logo_dev.api_key</code></td>
+      </tr>
+      <tr style="background-color:#ffffff;">
+        <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Test Connection Button</td>
+        <td style="padding:12px 14px;color:#6b7091;">Auto-saves your typed API key, tests live connectivity to Logo.dev, and displays a toast notification</td>
+        <td style="padding:12px 14px;text-align:center;font-weight:700;color:#15803d;">1-Click Action</td>
+        <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>action_test_logo_dev_connection</code></td>
+      </tr>
+      <tr style="background-color:#faf9ff;">
+        <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Immediate Logo Fetch</td>
+        <td style="padding:12px 14px;color:#6b7091;">Fetch logo synchronously during partner <code>create()</code> / <code>write()</code> instead of queueing for cron</td>
+        <td style="padding:12px 14px;text-align:center;font-weight:700;color:#4f46e5;">Disabled (<code>False</code>)</td>
+        <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>logo_dev.fetch_immediate</code></td>
+      </tr>
+      <tr style="background-color:#ffffff;">
+        <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Scheduled Cron Job</td>
+        <td style="padding:12px 14px;color:#6b7091;">Processes pending partners (<code>logo_fetch_pending=True</code>) in background batches of 50</td>
+        <td style="padding:12px 14px;text-align:center;font-weight:700;color:#4f46e5;">Every 15 mins</td>
+        <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>ir_cron_fetch_partner_logos</code></td>
+      </tr>
+      <tr style="background-color:#faf9ff;">
+        <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Partner Form Smart Button</td>
+        <td style="padding:12px 14px;color:#6b7091;">One-click manual fetch button in the Partner Form top button box</td>
+        <td style="padding:12px 14px;text-align:center;font-weight:700;color:#4f46e5;">Visible when domain set</td>
+        <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>action_fetch_logo</code></td>
+      </tr>
+      <tr style="background-color:#ffffff;">
+        <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Bulk Server Action</td>
+        <td style="padding:12px 14px;color:#6b7091;">Multi-record enrichment from Contacts List / Form Action menu</td>
+        <td style="padding:12px 14px;text-align:center;font-weight:700;color:#4f46e5;">Enabled</td>
+        <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>action_fetch_partner_logos</code></td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin:40px 0;"><img src="divider.gif" alt="" class="img img-fluid" style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
+
+  <!-- ============================================================ -->
+  <!-- QUICK START                                                  -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin:0 0 22px;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#15803d;margin-bottom:6px;">Get started</div>
+    <h2 style="font-size:26px;font-weight:800;margin:0;color:#2b2743;">Up and running in 2 minutes</h2>
+  </div>
+  <div style="background-color:#faf9ff;border:1px solid #e8e6fb;border-radius:18px;padding:18px 24px;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+      <tr>
+        <td width="52" style="vertical-align:top;padding:8px 0;">
+          <div style="width:38px;height:38px;border-radius:50%;background-color:#6366f1;color:#ffffff;font-weight:800;font-size:16px;line-height:38px;text-align:center;">1</div>
+        </td>
+        <td style="vertical-align:top;padding:8px 0 12px;">
+          <div style="font-weight:800;font-size:14.5px;color:#2b2743;">Install the module</div>
+          <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Install <strong>Partner Logo Enrichment (Logo.dev)</strong> (<code>partner_logo_enrichment</code>) from the Odoo Apps menu.</div>
+        </td>
+      </tr>
+      <tr>
+        <td width="52" style="vertical-align:top;padding:8px 0;">
+          <div style="width:38px;height:38px;border-radius:50%;background-color:#a855f7;color:#ffffff;font-weight:800;font-size:16px;line-height:38px;text-align:center;">2</div>
+        </td>
+        <td style="vertical-align:top;padding:8px 0 12px;">
+          <div style="font-weight:800;font-size:14.5px;color:#2b2743;">Copy your free Logo.dev Publishable Key</div>
+          <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Sign up for free at <a href="https://www.logo.dev" target="_blank" rel="noopener" style="color:#4f46e5;font-weight:700;text-decoration:none;">logo.dev</a>, open <strong>API Keys</strong>, and copy your <strong>Publishable Key</strong> (starts with <code>pk_...</code>).</div>
+        </td>
+      </tr>
+      <tr>
+        <td width="52" style="vertical-align:top;padding:8px 0;">
+          <div style="width:38px;height:38px;border-radius:50%;background-color:#ec4899;color:#ffffff;font-weight:800;font-size:16px;line-height:38px;text-align:center;">3</div>
+        </td>
+        <td style="vertical-align:top;padding:8px 0 12px;">
+          <div style="font-weight:800;font-size:14.5px;color:#2b2743;">Paste &amp; click &ldquo;Test Connection&rdquo; in Settings</div>
+          <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Go to <strong>Settings &rarr; General Settings &rarr; Contacts</strong>, paste your <code>pk_...</code> key into <strong>Logo.dev API Key</strong>, and click <strong><i class="fa fa-plug"></i> Test Connection</strong> to automatically save and verify your key with a green toast notification.</div>
+        </td>
+      </tr>
+      <tr>
+        <td width="52" style="vertical-align:top;padding:8px 0;">
+          <div style="width:38px;height:38px;border-radius:50%;background-color:#10b981;color:#ffffff;font-weight:800;font-size:16px;line-height:38px;text-align:center;">4</div>
+        </td>
+        <td style="vertical-align:top;padding:8px 0 0;">
+          <div style="font-weight:800;font-size:14.5px;color:#2b2743;">Enrich any partner</div>
+          <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Open any contact, enter a <strong>Website</strong> (e.g. <code>starbucks.com</code>) or <strong>Email</strong> (e.g. <code>info@stripe.com</code>), and click the <strong>Fetch Logo</strong> smart button (or let auto-sync handle it).</div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- REQUIREMENTS                                                 -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin:40px 0 22px;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#0891b2;margin-bottom:6px;">Compatibility</div>
+    <h2 style="font-size:26px;font-weight:800;margin:0;color:#2b2743;">Requirements</h2>
+  </div>
+  <div style="border:1px solid #e8e6fb;border-left:5px solid #06b6d4;border-radius:14px;overflow:hidden;">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:collapse;font-size:13.5px;">
+      <tr style="background-color:#faf9ff;">
+        <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">Odoo version</td>
+        <td style="padding:12px 16px;color:#6b7091;line-height:1.6;">18.0 &mdash; built and verified on Odoo 18.0 Community &amp; Enterprise</td>
+      </tr>
+      <tr style="background-color:#ffffff;">
+        <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">Depends on</td>
+        <td style="padding:12px 16px;color:#6b7091;line-height:1.6;"><code>base</code>, <code>base_setup</code> &mdash; standard core Odoo modules only</td>
+      </tr>
+      <tr style="background-color:#faf9ff;">
+        <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">Extra Python packages</td>
+        <td style="padding:12px 16px;color:#6b7091;line-height:1.6;">None &mdash; uses standard <code>requests</code>, <code>base64</code>, and <code>urllib.parse</code> included with Odoo</td>
+      </tr>
+      <tr style="background-color:#ffffff;">
+        <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">API Key</td>
+        <td style="padding:12px 16px;color:#6b7091;line-height:1.6;">Free Logo.dev Publishable Key (<code>pk_...</code>) from <a href="https://www.logo.dev" target="_blank" rel="noopener" style="color:#4f46e5;font-weight:700;text-decoration:none;">logo.dev</a></td>
+      </tr>
+      <tr style="background-color:#faf9ff;">
+        <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">Hosting</td>
+        <td style="padding:12px 16px;color:#6b7091;line-height:1.6;">Odoo.sh or on-premise server with outbound HTTPS access to <code>img.logo.dev</code></td>
+      </tr>
+      <tr style="background-color:#ffffff;">
+        <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">License / version</td>
+        <td style="padding:12px 16px;color:#6b7091;line-height:1.6;">LGPL-3 &middot; 18.0.1.0.0</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin:40px 0;"><img src="divider.gif" alt="" class="img img-fluid" style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
+
+  <!-- ============================================================ -->
+  <!-- FAQ                                                          -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin:0 0 22px;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#db2777;margin-bottom:6px;">FAQ</div>
+    <h2 style="font-size:26px;font-weight:800;margin:0;color:#2b2743;">Questions, answered</h2>
+    <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:560px;line-height:1.6;">Click any question below to expand the answer.</p>
+  </div>
+  <details style="background-color:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
+    <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">How can I verify that my Logo.dev API key is working before enriching partners?</summary>
+    <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">In <strong>Settings &rarr; General Settings &rarr; Contacts</strong>, paste your <code>pk_...</code> key and click the <strong><i class="fa fa-plug"></i> Test Connection</strong> button right underneath the input field. It automatically persists your key, performs a live test request against <code>img.logo.dev</code>, and shows a green <strong>&ldquo;Connection Successful&rdquo;</strong> toast notification.</div>
+  </details>
+  <details style="background-color:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
+    <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">Which fields are mandatory on a partner to fetch a logo?</summary>
+    <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">Alongside the partner&rsquo;s <strong>Name</strong>, you only need either a <strong>Website</strong> (e.g., <code>starbucks.com</code> or <code>https://www.stripe.com</code>) <strong>or</strong> an <strong>Email</strong> containing a valid domain (e.g., <code>info@starbucks.com</code> or <code>user@gmail.com</code>). Website is checked first; if empty, the email domain is used.</div>
+  </details>
+  <details style="background-color:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
+    <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">Which Logo.dev key should I paste &mdash; Publishable (pk_) or Secret (sk_)?</summary>
+    <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">Use your <strong>Publishable Key</strong> (starts with <code>pk_...</code>). Logo.dev&rsquo;s image CDN endpoint (<code>https://img.logo.dev/{domain}?token=pk_...</code>) is designed specifically for publishable tokens.</div>
+  </details>
+  <details style="background-color:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
+    <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">Will automatic enrichment overwrite a photo I already uploaded?</summary>
+    <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">No. Automatic enrichment on <code>create()</code>, <code>write()</code>, and the 15-minute cron job strictly checks <code>if not partner.image_1920</code> first. Only clicking the manual <strong>Fetch Logo</strong> button or running the bulk action intentionally refreshes the image.</div>
+  </details>
+  <details style="background-color:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
+    <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">What happens if a company&rsquo;s domain has no logo on Logo.dev (HTTP 404)?</summary>
+    <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">The module sets <code>logo_fetch_status = 'not_found'</code> and <code>logo_fetch_pending = False</code>. This ensures the background cron job never wastes API calls retrying missing domains in an infinite loop.</div>
+  </details>
+  <details style="background-color:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
+    <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">How do I enrich hundreds of existing partners at once?</summary>
+    <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">Switch to the Contacts <strong>List View</strong>, select the contacts you want to enrich, and click <strong>Action &rarr; Fetch Partner Logos</strong>. Odoo will fetch their logos and show a summary toast notification.</div>
+  </details>
+
+  <!-- ============================================================ -->
+  <!-- CHANGELOG                                                    -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin:40px 0 22px;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#9333ea;margin-bottom:6px;">Changelog</div>
+    <h2 style="font-size:26px;font-weight:800;margin:0;color:#2b2743;">What&rsquo;s new</h2>
+  </div>
+  <div style="background-color:#ffffff;border:1px solid #e8e6fb;border-left:5px solid #a855f7;border-radius:14px;padding:18px 22px;">
+    <div style="font-weight:800;font-size:15px;color:#2b2743;margin-bottom:8px;">
+      18.0.1.0.0 <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:50px;font-size:12px;font-weight:700;background-color:#f5eaff;color:#9333ea;">Initial release</span>
     </div>
+    <ul style="margin:0;padding-left:20px;font-size:13.5px;color:#6b7091;line-height:1.85;">
+      <li>Automatic domain extraction and normalization from partner <code>website</code> and <code>email</code> fields</li>
+      <li>Logo.dev API integration writing high-resolution PNGs directly to <code>res.partner.image_1920</code></li>
+      <li>Configurable <strong>Logo.dev API Key</strong>, 1-click <strong>Test Connection</strong> button, and <strong>Immediate Logo Fetch</strong> toggle in General Settings &rarr; Contacts</li>
+      <li>One-click <strong>Fetch Logo</strong> smart button on the Partner Form view with toast feedback and <code>soft_reload</code></li>
+      <li>Multi-record <strong>Fetch Partner Logos</strong> server action bound to the Partner List and Form Action menu</li>
+      <li>15-minute scheduled cron job processing queued partners in bounded batches of 50 with 404 loop protection</li>
+    </ul>
+  </div>
+
+  <div style="margin:40px 0;"><img src="divider.gif" alt="" class="img img-fluid" style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
+
+  <!-- ============================================================ -->
+  <!-- ABOUT THE AUTHOR / MORE APPS                                 -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin:0 0 22px;">
+    <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#6366f1;margin-bottom:6px;">Author &amp; Free Customizations</div>
+    <h2 style="font-size:26px;font-weight:800;margin:0;color:#2b2743;">Built by</h2>
+    <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:560px;line-height:1.6;">Connect for free customizations, collaboration, or explore more Odoo 18 apps from the same author.</p>
+  </div>
+
+  <div style="background-color:#f4f5ff;border:1px solid #dfe2ff;border-radius:22px;padding:28px 24px;text-align:center;">
+    <div style="display:inline-block;width:68px;height:68px;border-radius:50%;background-color:#6366f1;color:#ffffff;font-weight:800;font-size:23px;line-height:68px;text-align:center;">GU</div>
+    <div style="font-size:19px;font-weight:800;color:#2b2743;margin:12px 0 4px;">Gardas Udaykiran</div>
+    <p style="font-size:13.5px;color:#6b7091;max-width:540px;margin:0 auto 18px;line-height:1.65;">I build and publish open-source Odoo 18 apps &mdash; Contacts enrichment, Point of Sale tools, and login security. All of them are on the Odoo Apps Store and in one GitHub repository.</p>
     <div style="text-align:center;">
-        <img src="enrichment_preview.gif" alt="Partner Logo Enrichment live walkthrough"
-             style="max-width:100%;border-radius:18px;border:1px solid #e8e6fb;box-shadow:0 10px 30px rgba(0,0,0,0.08);"/>
-        <div style="text-align:center;margin-top:14px;">
-            <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#eef0ff;color:#4f46e5;">1. Settings → 🔌 Test Connection</span>
-            <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#f5eaff;color:#9333ea;">2. Enter Website or Email</span>
-            <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#dcfce7;color:#15803d;">3. Click Fetch Logo / Auto-Save</span>
-            <span style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#fef3c7;color:#b45309;">4. Bulk Action &amp; 15-Min Cron</span>
-        </div>
+      <a href="https://apps.odoo.com/apps/browse?repo_maintainer_id=1184648" target="_blank" rel="noopener" class="btn btn-lg" style="display:inline-block;padding:11px 22px;margin:5px;border-radius:50px;color:#ffffff;font-weight:700;font-size:14px;text-decoration:none;background-color:#6366f1;"><i class="fa fa-th-large"></i> All my Odoo apps</a>
+      <a href="https://github.com/udaykiran712/uday_odoo_apps" target="_blank" rel="noopener" class="btn btn-lg" style="display:inline-block;padding:11px 22px;margin:5px;border-radius:50px;color:#ffffff;font-weight:700;font-size:14px;text-decoration:none;background-color:#24292e;"><i class="fa fa-github"></i> GitHub repository</a>
+      <a href="https://www.linkedin.com/in/udaykirangardas/" target="_blank" rel="noopener" class="btn btn-lg" style="display:inline-block;padding:11px 22px;margin:5px;border-radius:50px;color:#ffffff;font-weight:700;font-size:14px;text-decoration:none;background-color:#0a66c2;"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+      <a href="mailto:gardasudaykiran2001@gmail.com" class="btn btn-lg" style="display:inline-block;padding:11px 22px;margin:5px;border-radius:50px;color:#ffffff;font-weight:700;font-size:14px;text-decoration:none;background-color:#0d9488;"><i class="fa fa-envelope"></i> Email for Customization</a>
     </div>
+  </div>
 
-    <div style="margin:44px 0;"><img src="divider.gif" alt=""
-                                     style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
+  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate;border-spacing:12px;margin-top:8px;">
+    <tr>
+      <td width="50%" style="background-color:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #6366f1;border-radius:16px;padding:18px;vertical-align:top;">
+        <div style="font-weight:800;font-size:14.5px;color:#2b2743;margin-bottom:6px;">Email OTP Login</div>
+        <div style="font-size:12.5px;color:#6b7091;line-height:1.65;margin-bottom:12px;">Password-less login for Odoo 18 with hashed one-time email codes, rate limiting, group policies, and a live security dashboard.</div>
+        <a href="https://apps.odoo.com/apps/modules/18.0/auth_otp_login" target="_blank" rel="noopener" class="btn" style="display:inline-block;padding:8px 16px;border-radius:50px;color:#ffffff;font-weight:700;font-size:12.5px;text-decoration:none;background-color:#6366f1;">View on Odoo Apps &rarr;</a>
+      </td>
+      <td width="50%" style="background-color:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #ec4899;border-radius:16px;padding:18px;vertical-align:top;">
+        <div style="font-weight:800;font-size:14.5px;color:#2b2743;margin-bottom:6px;">POS Product Stock &amp; Price Display</div>
+        <div style="font-size:12.5px;color:#6b7091;line-height:1.65;margin-bottom:12px;">Display dynamic sales price and real-time, location-specific stock on-hand directly on the Point of Sale product card with an out-of-stock blocker.</div>
+        <a href="https://apps.odoo.com/apps/modules/18.0/pos_product_stock_price_display" target="_blank" rel="noopener" class="btn" style="display:inline-block;padding:8px 16px;border-radius:50px;color:#ffffff;font-weight:700;font-size:12.5px;text-decoration:none;background-color:#db2777;">View on Odoo Apps &rarr;</a>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%" style="background-color:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #06b6d4;border-radius:16px;padding:18px;vertical-align:top;">
+        <div style="font-weight:800;font-size:14.5px;color:#2b2743;margin-bottom:6px;">POS User Access Restriction</div>
+        <div style="font-size:12.5px;color:#6b7091;line-height:1.65;margin-bottom:12px;">Restrict POS users to specific Point of Sale shops or registers in Odoo 18 with enforced record rules.</div>
+        <a href="https://apps.odoo.com/apps/modules/18.0/pos_access_restriction" target="_blank" rel="noopener" class="btn" style="display:inline-block;padding:8px 16px;border-radius:50px;color:#ffffff;font-weight:700;font-size:12.5px;text-decoration:none;background-color:#0891b2;">View on Odoo Apps &rarr;</a>
+      </td>
+      <td width="50%" style="background-color:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #f59e0b;border-radius:16px;padding:18px;vertical-align:top;">
+        <div style="font-weight:800;font-size:14.5px;color:#2b2743;margin-bottom:6px;">POS Auto Lot/Serial Selection</div>
+        <div style="font-size:12.5px;color:#6b7091;line-height:1.65;margin-bottom:12px;">Automatically assigns the oldest lot/serial (FEFO/FIFO) in Point of Sale without popup interruptions.</div>
+        <a href="https://apps.odoo.com/apps/modules/18.0/pos_auto_lot_fefo_selection" target="_blank" rel="noopener" class="btn" style="display:inline-block;padding:8px 16px;border-radius:50px;color:#ffffff;font-weight:700;font-size:12.5px;text-decoration:none;background-color:#d97706;">View on Odoo Apps &rarr;</a>
+      </td>
+    </tr>
+  </table>
 
-    <!-- ============================================================ -->
-    <!-- HOW IT WORKS                                                 -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin:0px 0 22px;">
-        <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#ec4899;margin-bottom:6px;">
-            Flow
-        </div>
-        <h2 style="font-size:26px;font-weight:800;margin:0;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            How it works</h2>
-        <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:560px;line-height:1.6;">Four automated steps
-            from domain parsing to high-resolution avatar generation.</p>
+  <!-- ============================================================ -->
+  <!-- CLOSING                                                      -->
+  <!-- ============================================================ -->
+  <div style="text-align:center;margin-top:40px;padding:30px 28px;background-color:#1e1b4b;border-radius:20px;border:1px solid #312e81;">
+    <div style="font-size:19px;font-weight:800;color:#ffffff;margin-bottom:8px;">Built for real production use</div>
+    <div style="font-size:13.5px;color:#e0e7ff;max-width:560px;margin:0 auto 14px;line-height:1.7;">Every feature on this page is backed by recursion-safe Odoo 18 ORM logic, 1-click API connection verification, bounded background cron batches, and 404 loop protection &mdash; not a demo shortcut.</div>
+    <div style="font-size:13px;color:#ffffff;">
+      Questions, ideas or feature requests? Reach out on
+      <a href="https://www.linkedin.com/in/udaykirangardas/" target="_blank" rel="noopener" style="color:#a5b4fc;font-weight:800;text-decoration:underline;">LinkedIn</a>,
+      <a href="https://github.com/udaykiran712/uday_odoo_apps" target="_blank" rel="noopener" style="color:#a5b4fc;font-weight:800;text-decoration:underline;">GitHub</a>, or
+      <a href="mailto:gardasudaykiran2001@gmail.com" style="color:#a5b4fc;font-weight:800;text-decoration:underline;">gardasudaykiran2001@gmail.com</a>.
     </div>
-    <div style="text-align:center;">
-        <img src="how_it_works.gif" alt="How Partner Logo Enrichment works: Extract, Query, Save, Sync"
-             style="max-width:100%;border-radius:18px;border:1px solid #e8e6fb;"/>
-    </div>
-    <table border="0" cellpadding="0" cellspacing="0" width="100%"
-           style="border-collapse:separate;border-spacing:10px;margin-top:6px;">
-        <tr>
-            <td width="25%"
-                style="background:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #6366f1;border-radius:14px;padding:14px 14px 16px;vertical-align:top;">
-                <div style="font-weight:800;font-size:14px;color:#2b2743;margin-bottom:5px;">1. Extract</div>
-                <div style="font-size:12.5px;color:#6b7091;line-height:1.6;">Reads <code>website</code> first (or falls
-                    back to <code>email</code>) and strips protocols, <code>www.</code>, ports, and paths to isolate the
-                    clean domain.
-                </div>
-            </td>
-            <td width="25%"
-                style="background:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #a855f7;border-radius:14px;padding:14px 14px 16px;vertical-align:top;">
-                <div style="font-weight:800;font-size:14px;color:#2b2743;margin-bottom:5px;">2. Verify &amp; Query</div>
-                <div style="font-size:12.5px;color:#6b7091;line-height:1.6;">Uses your verified <code>pk_...</code> key
-                    to call <code>https://img.logo.dev/{domain}</code> with <code>format=png</code>,
-                    <code>size=200</code>, and a 10s timeout.
-                </div>
-            </td>
-            <td width="25%"
-                style="background:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #ec4899;border-radius:14px;padding:14px 14px 16px;vertical-align:top;">
-                <div style="font-weight:800;font-size:14px;color:#2b2743;margin-bottom:5px;">3. Enrich</div>
-                <div style="font-size:12.5px;color:#6b7091;line-height:1.6;">Base64-encodes the PNG binary into <code>image_1920</code>,
-                    automatically computing all Odoo avatar thumbnails.
-                </div>
-            </td>
-            <td width="25%"
-                style="background:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #10b981;border-radius:14px;padding:14px 14px 16px;vertical-align:top;">
-                <div style="font-weight:800;font-size:14px;color:#2b2743;margin-bottom:5px;">4. Track Status</div>
-                <div style="font-size:12.5px;color:#6b7091;line-height:1.6;">Sets <code>logo_fetch_status</code> to
-                    <code>fetched</code>, <code>not_found</code>, or <code>failed</code> and clears <code>logo_fetch_pending</code>.
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    <div style="margin:44px 0;"><img src="divider.gif" alt=""
-                                     style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
-
-    <!-- ============================================================ -->
-    <!-- RELIABILITY & ARCHITECTURE IN DETAIL                         -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin:0px 0 22px;">
-        <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#a855f7;margin-bottom:6px;">
-            Architecture
-        </div>
-        <h2 style="font-size:26px;font-weight:800;margin:0;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            Reliability, in detail</h2>
-        <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:560px;line-height:1.6;">Engineered for real
-            production databases — what actually happens under the hood.</p>
-    </div>
-    <div style="background:#14112b;border-radius:22px;overflow:hidden;box-shadow:0 16px 44px rgba(20,17,43,0.35);">
-        <img src="reliability_banner.gif" alt="Built-in ORM reliability and safeguards"
-             style="width:100%;display:block;"/>
-        <table border="0" cellpadding="0" cellspacing="0" width="100%"
-               style="border-collapse:separate;border-spacing:12px;">
-            <tr>
-                <td width="50%"
-                    style="background:#1d1940;border:1px solid #2d2860;border-radius:14px;padding:15px 17px;vertical-align:top;">
-                    <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:5px;"><span
-                            style="display:inline-block;width:22px;height:22px;border-radius:50%;background:#6366f1;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>1-Click
-                        API connection tester
-                    </div>
-                    <div style="font-size:12.5px;color:#b9bce0;line-height:1.6;">Built-in <code>action_test_logo_dev_connection()</code>
-                        in Settings auto-persists your typed key and tests live connectivity against
-                        <code>img.logo.dev</code>.
-                    </div>
-                </td>
-                <td width="50%"
-                    style="background:#1d1940;border:1px solid #2d2860;border-radius:14px;padding:15px 17px;vertical-align:top;">
-                    <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:5px;"><span
-                            style="display:inline-block;width:22px;height:22px;border-radius:50%;background:#a855f7;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Recursion-safe
-                        context guard
-                    </div>
-                    <div style="font-size:12.5px;color:#b9bce0;line-height:1.6;">All internal updates use <code>with_context(skip_logo_fetch=True)</code>
-                        so writing <code>image_1920</code> never re-triggers <code>write()</code> recursively.
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td width="50%"
-                    style="background:#1d1940;border:1px solid #2d2860;border-radius:14px;padding:15px 17px;vertical-align:top;">
-                    <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:5px;"><span
-                            style="display:inline-block;width:22px;height:22px;border-radius:50%;background:#ec4899;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Smart
-                        404 handling
-                    </div>
-                    <div style="font-size:12.5px;color:#b9bce0;line-height:1.6;">When Logo.dev returns HTTP 404, the
-                        partner is marked <code>not_found</code> and <code>logo_fetch_pending=False</code> to prevent
-                        endless cron retries.
-                    </div>
-                </td>
-                <td width="50%"
-                    style="background:#1d1940;border:1px solid #2d2860;border-radius:14px;padding:15px 17px;vertical-align:top;">
-                    <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:5px;"><span
-                            style="display:inline-block;width:22px;height:22px;border-radius:50%;background:#06b6d4;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Bounded
-                        50-record cron batches
-                    </div>
-                    <div style="font-size:12.5px;color:#b9bce0;line-height:1.6;">The 15-minute scheduled action
-                        processes up to 50 pending partners per run so worker threads never hit timeouts on large
-                        imports.
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td width="50%"
-                    style="background:#1d1940;border:1px solid #2d2860;border-radius:14px;padding:15px 17px;vertical-align:top;">
-                    <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:5px;"><span
-                            style="display:inline-block;width:22px;height:22px;border-radius:50%;background:#f59e0b;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Multi-record
-                        &amp; batch safe
-                    </div>
-                    <div style="font-size:12.5px;color:#b9bce0;line-height:1.6;">Uses
-                        <code>@api.model_create_multi</code> and iterates recordsets safely in <code>write()</code> and
-                        <code>action_fetch_logo()</code> without singleton errors.
-                    </div>
-                </td>
-                <td width="50%"
-                    style="background:#1d1940;border:1px solid #2d2860;border-radius:14px;padding:15px 17px;vertical-align:top;">
-                    <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:5px;"><span
-                            style="display:inline-block;width:22px;height:22px;border-radius:50%;background:#10b981;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Instant
-                        UI toast &amp; soft reload
-                    </div>
-                    <div style="font-size:12.5px;color:#b9bce0;line-height:1.6;">Manual fetches return a <code>display_notification</code>
-                        client action chained with <code>soft_reload</code> so the new logo appears immediately.
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <div style="margin:44px 0;"><img src="divider.gif" alt=""
-                                     style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
-
-    <!-- ============================================================ -->
-    <!-- CONFIGURATION                                                -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin:0px 0 22px;">
-        <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#f59e0b;margin-bottom:6px;">
-            Settings
-        </div>
-        <h2 style="font-size:26px;font-weight:800;margin:0;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            You stay in control</h2>
-        <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:560px;line-height:1.6;">Simple configuration
-            under <strong>Settings → General Settings → Contacts</strong>.</p>
-    </div>
-    <div style="border:1px solid #e8e6fb;border-radius:16px;overflow:hidden;">
-        <table border="0" cellpadding="0" cellspacing="0" width="100%"
-               style="border-collapse:collapse;font-size:13.5px;">
-            <tr style="background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);">
-                <th style="padding:12px 14px;text-align:left;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:#ffffff;">
-                    Setting / Component
-                </th>
-                <th style="padding:12px 14px;text-align:left;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:#ffffff;">
-                    What it controls
-                </th>
-                <th style="padding:12px 14px;text-align:center;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:#ffffff;">
-                    Default
-                </th>
-                <th style="padding:12px 14px;text-align:center;font-size:12px;letter-spacing:0.6px;text-transform:uppercase;color:#ffffff;">
-                    Technical Key
-                </th>
-            </tr>
-            <tr style="background:#faf9ff;">
-                <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Logo.dev API Key</td>
-                <td style="padding:12px 14px;color:#6b7091;">Publishable key (<code>pk_...</code>) used to authenticate
-                    requests to <code>img.logo.dev</code></td>
-                <td style="padding:12px 14px;text-align:center;font-weight:700;color:#6366f1;">Empty</td>
-                <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>logo_dev.api_key</code></td>
-            </tr>
-            <tr style="background:#ffffff;">
-                <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Test Connection Button</td>
-                <td style="padding:12px 14px;color:#6b7091;">Auto-saves your typed API key, tests live connectivity to
-                    Logo.dev, and displays a toast notification
-                </td>
-                <td style="padding:12px 14px;text-align:center;font-weight:700;color:#10b981;">1-Click Action</td>
-                <td style="padding:12px 14px;text-align:center;color:#6b7091;">
-                    <code>action_test_logo_dev_connection</code></td>
-            </tr>
-            <tr style="background:#faf9ff;">
-                <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Immediate Logo Fetch</td>
-                <td style="padding:12px 14px;color:#6b7091;">Fetch logo synchronously during partner
-                    <code>create()</code> / <code>write()</code> instead of queueing for cron
-                </td>
-                <td style="padding:12px 14px;text-align:center;font-weight:700;color:#6366f1;">Disabled
-                    (<code>False</code>)
-                </td>
-                <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>logo_dev.fetch_immediate</code>
-                </td>
-            </tr>
-            <tr style="background:#ffffff;">
-                <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Scheduled Cron Job</td>
-                <td style="padding:12px 14px;color:#6b7091;">Processes pending partners
-                    (<code>logo_fetch_pending=True</code>) in background batches of 50
-                </td>
-                <td style="padding:12px 14px;text-align:center;font-weight:700;color:#6366f1;">Every 15 mins</td>
-                <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>ir_cron_fetch_partner_logos</code>
-                </td>
-            </tr>
-            <tr style="background:#faf9ff;">
-                <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Partner Form Smart Button</td>
-                <td style="padding:12px 14px;color:#6b7091;">One-click manual fetch button in the Partner Form top
-                    button box
-                </td>
-                <td style="padding:12px 14px;text-align:center;font-weight:700;color:#6366f1;">Visible when domain set
-                </td>
-                <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>action_fetch_logo</code></td>
-            </tr>
-            <tr style="background:#ffffff;">
-                <td style="padding:12px 14px;font-weight:700;color:#2b2743;">Bulk Server Action</td>
-                <td style="padding:12px 14px;color:#6b7091;">Multi-record enrichment from Contacts List / Form Action
-                    menu
-                </td>
-                <td style="padding:12px 14px;text-align:center;font-weight:700;color:#6366f1;">Enabled</td>
-                <td style="padding:12px 14px;text-align:center;color:#6b7091;"><code>action_fetch_partner_logos</code>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <div style="margin:44px 0;"><img src="divider.gif" alt=""
-                                     style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
-
-    <!-- ============================================================ -->
-    <!-- QUICK START                                                  -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin:0px 0 22px;">
-        <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#10b981;margin-bottom:6px;">
-            Get started
-        </div>
-        <h2 style="font-size:26px;font-weight:800;margin:0;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            Up and running in 2 minutes</h2>
-    </div>
-    <div style="background:#faf9ff;border:1px solid #e8e6fb;border-radius:18px;padding:18px 24px;">
-        <table border="0" cellpadding="0" cellspacing="0" width="100%">
-            <tr>
-                <td width="52" style="vertical-align:top;padding:8px 0;">
-                    <div style="width:38px;height:38px;border-radius:50%;background:#6366f1;color:#ffffff;font-weight:800;font-size:16px;line-height:38px;text-align:center;">
-                        1
-                    </div>
-                </td>
-                <td style="vertical-align:top;padding:8px 0 12px;">
-                    <div style="font-weight:800;font-size:14.5px;color:#2b2743;">Install the module</div>
-                    <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Install <strong>Partner Logo
-                        Enrichment (Logo.dev)</strong> (<code>partner_logo_enrichment</code>) from the Odoo Apps menu.
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td width="52" style="vertical-align:top;padding:8px 0;">
-                    <div style="width:38px;height:38px;border-radius:50%;background:#a855f7;color:#ffffff;font-weight:800;font-size:16px;line-height:38px;text-align:center;">
-                        2
-                    </div>
-                </td>
-                <td style="vertical-align:top;padding:8px 0 12px;">
-                    <div style="font-weight:800;font-size:14.5px;color:#2b2743;">Copy your free Logo.dev Publishable
-                        Key
-                    </div>
-                    <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Sign up for free at <a
-                            href="https://www.logo.dev" target="_blank" rel="noopener"
-                            style="color:#6366f1;font-weight:700;text-decoration:none;">logo.dev</a>, open <strong>API
-                        Keys</strong>, and copy your <strong>Publishable Key</strong> (starts with <code>pk_...</code>).
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td width="52" style="vertical-align:top;padding:8px 0;">
-                    <div style="width:38px;height:38px;border-radius:50%;background:#ec4899;color:#ffffff;font-weight:800;font-size:16px;line-height:38px;text-align:center;">
-                        3
-                    </div>
-                </td>
-                <td style="vertical-align:top;padding:8px 0 12px;">
-                    <div style="font-weight:800;font-size:14.5px;color:#2b2743;">Paste &amp; click “Test Connection” in
-                        Settings
-                    </div>
-                    <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Go to <strong>Settings → General
-                        Settings → Contacts</strong>, paste your <code>pk_...</code> key into <strong>Logo.dev API
-                        Key</strong>, and click <strong>🔌 Test Connection</strong> to automatically save and verify your
-                        key with a green toast notification.
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td width="52" style="vertical-align:top;padding:8px 0;">
-                    <div style="width:38px;height:38px;border-radius:50%;background:#10b981;color:#ffffff;font-weight:800;font-size:16px;line-height:38px;text-align:center;">
-                        4
-                    </div>
-                </td>
-                <td style="vertical-align:top;padding:8px 0 0;">
-                    <div style="font-weight:800;font-size:14.5px;color:#2b2743;">Enrich any partner</div>
-                    <div style="font-size:13.5px;color:#6b7091;line-height:1.65;">Open any contact, enter a <strong>Website</strong>
-                        (e.g. <code>starbucks.com</code>) or <strong>Email</strong> (e.g. <code>info@stripe.com</code>),
-                        and click the <strong>Fetch Logo</strong> smart button (or let auto-sync handle it).
-                    </div>
-                </td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- ============================================================ -->
-    <!-- REQUIREMENTS                                                 -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin:40px 0 22px;">
-        <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#06b6d4;margin-bottom:6px;">
-            Compatibility
-        </div>
-        <h2 style="font-size:26px;font-weight:800;margin:0;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            Requirements</h2>
-    </div>
-    <div style="border:1px solid #e8e6fb;border-left:5px solid #06b6d4;border-radius:14px;overflow:hidden;">
-        <table border="0" cellpadding="0" cellspacing="0" width="100%"
-               style="border-collapse:collapse;font-size:13.5px;">
-            <tr style="background:#faf9ff;">
-                <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">Odoo
-                    version
-                </td>
-                <td style="padding:12px 16px;color:#6b7091;line-height:1.6;">18.0 — built and verified on Odoo 18.0
-                    Community &amp; Enterprise
-                </td>
-            </tr>
-            <tr style="background:#ffffff;">
-                <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">Depends on
-                </td>
-                <td style="padding:12px 16px;color:#6b7091;line-height:1.6;"><code>base</code>, <code>base_setup</code>
-                    — standard core Odoo modules only
-                </td>
-            </tr>
-            <tr style="background:#faf9ff;">
-                <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">Extra Python
-                    packages
-                </td>
-                <td style="padding:12px 16px;color:#6b7091;line-height:1.6;">None — uses standard <code>requests</code>,
-                    <code>base64</code>, and <code>urllib.parse</code> included with Odoo
-                </td>
-            </tr>
-            <tr style="background:#ffffff;">
-                <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">API Key</td>
-                <td style="padding:12px 16px;color:#6b7091;line-height:1.6;">Free Logo.dev Publishable Key
-                    (<code>pk_...</code>) from <a href="https://www.logo.dev" target="_blank" rel="noopener"
-                                                  style="color:#6366f1;font-weight:700;text-decoration:none;">logo.dev</a>
-                </td>
-            </tr>
-            <tr style="background:#faf9ff;">
-                <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">Hosting</td>
-                <td style="padding:12px 16px;color:#6b7091;line-height:1.6;">Odoo.sh or on-premise server with outbound
-                    HTTPS access to <code>img.logo.dev</code></td>
-            </tr>
-            <tr style="background:#ffffff;">
-                <td width="30%" style="padding:12px 16px;font-weight:700;color:#2b2743;vertical-align:top;">License /
-                    version
-                </td>
-                <td style="padding:12px 16px;color:#6b7091;line-height:1.6;">LGPL-3 &middot; 18.0.1.0.0</td>
-            </tr>
-        </table>
-    </div>
-
-    <div style="margin:44px 0;"><img src="divider.gif" alt=""
-                                     style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
-
-    <!-- ============================================================ -->
-    <!-- FAQ                                                          -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin:0px 0 22px;">
-        <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#ec4899;margin-bottom:6px;">
-            FAQ
-        </div>
-        <h2 style="font-size:26px;font-weight:800;margin:0;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            Questions, answered</h2>
-        <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:560px;line-height:1.6;">Click any question
-            below to expand the answer.</p>
-    </div>
-    <details style="background:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
-        <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">How can I verify
-            that my Logo.dev API key is working before enriching partners?
-        </summary>
-        <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">In <strong>Settings → General
-            Settings → Contacts</strong>, paste your <code>pk_...</code> key and click the <strong>🔌 Test
-            Connection</strong> button right underneath the input field. It automatically persists your key, performs a
-            live test request against <code>img.logo.dev</code>, and shows a green <strong>“Connection
-                Successful”</strong> toast notification.
-        </div>
-    </details>
-    <details style="background:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
-        <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">Which fields are
-            mandatory on a partner to fetch a logo?
-        </summary>
-        <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">Alongside the partner’s
-            <strong>Name</strong>, you only need either a <strong>Website</strong> (e.g., <code>starbucks.com</code> or
-            <code>https://www.stripe.com</code>) <strong>or</strong> an <strong>Email</strong> containing a valid domain
-            (e.g., <code>info@starbucks.com</code> or <code>user@gmail.com</code>). Website is checked first; if empty,
-            the email domain is used.
-        </div>
-    </details>
-    <details style="background:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
-        <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">Which Logo.dev
-            key should I paste — Publishable (pk_) or Secret (sk_)?
-        </summary>
-        <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">Use your <strong>Publishable
-            Key</strong> (starts with <code>pk_...</code>). Logo.dev’s image CDN endpoint (<code>https://img.logo.dev/{domain}?token=pk_...</code>)
-            is designed specifically for publishable tokens.
-        </div>
-    </details>
-    <details style="background:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
-        <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">Will automatic
-            enrichment overwrite a photo I already uploaded?
-        </summary>
-        <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">No. Automatic enrichment on
-            <code>create()</code>, <code>write()</code>, and the 15-minute cron job strictly checks <code>if not
-                partner.image_1920</code> first. Only clicking the manual <strong>Fetch Logo</strong> button or running
-            the bulk action intentionally refreshes the image.
-        </div>
-    </details>
-    <details style="background:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
-        <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">What happens if
-            a company’s domain has no logo on Logo.dev (HTTP 404)?
-        </summary>
-        <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">The module sets <code>logo_fetch_status
-            = 'not_found'</code> and <code>logo_fetch_pending = False</code>. This ensures the background cron job never
-            wastes API calls retrying missing domains in an infinite loop.
-        </div>
-    </details>
-    <details style="background:#ffffff;border:1px solid #e8e6fb;border-radius:14px;margin-bottom:10px;">
-        <summary style="cursor:pointer;font-weight:700;font-size:14px;color:#2b2743;padding:14px 18px;">How do I enrich
-            hundreds of existing partners at once?
-        </summary>
-        <div style="padding:0 18px 16px;font-size:13.5px;color:#6b7091;line-height:1.7;">Switch to the Contacts <strong>List
-            View</strong>, select the contacts you want to enrich, and click <strong>Action → Fetch Partner
-            Logos</strong>. Odoo will fetch their logos and show a summary toast notification.
-        </div>
-    </details>
-
-    <!-- ============================================================ -->
-    <!-- CHANGELOG                                                    -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin:40px 0 22px;">
-        <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#a855f7;margin-bottom:6px;">
-            Changelog
-        </div>
-        <h2 style="font-size:26px;font-weight:800;margin:0;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            What’s new</h2>
-    </div>
-    <div style="background:#ffffff;border:1px solid #e8e6fb;border-left:5px solid #a855f7;border-radius:14px;padding:18px 22px;">
-        <div style="font-weight:800;font-size:15px;color:#2b2743;margin-bottom:8px;">
-            18.0.1.0.0 <span
-                style="display:inline-block;padding:5px 13px;margin:3px;border-radius:999px;font-size:12px;font-weight:700;background:#f5eaff;color:#9333ea;">Initial release</span>
-        </div>
-        <ul style="margin:0;padding-left:20px;font-size:13.5px;color:#6b7091;line-height:1.85;">
-            <li>Automatic domain extraction and normalization from partner <code>website</code> and <code>email</code>
-                fields
-            </li>
-            <li>Logo.dev API integration writing high-resolution PNGs directly to <code>res.partner.image_1920</code>
-            </li>
-            <li>Configurable <strong>Logo.dev API Key</strong>, 1-click <strong>Test Connection</strong> button, and
-                <strong>Immediate Logo Fetch</strong> toggle in General Settings → Contacts
-            </li>
-            <li>One-click <strong>Fetch Logo</strong> smart button on the Partner Form view with toast feedback and
-                <code>soft_reload</code></li>
-            <li>Multi-record <strong>Fetch Partner Logos</strong> server action bound to the Partner List and Form
-                Action menu
-            </li>
-            <li>15-minute scheduled cron job processing queued partners in bounded batches of 50 with 404 loop
-                protection
-            </li>
-        </ul>
-    </div>
-
-    <div style="margin:44px 0;"><img src="divider.gif" alt=""
-                                     style="width:100%;height:8px;border-radius:99px;display:block;"/></div>
-
-    <!-- ============================================================ -->
-    <!-- ABOUT THE AUTHOR / MORE APPS                                 -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin:0px 0 22px;">
-        <div style="font-size:11px;font-weight:800;letter-spacing:2.2px;text-transform:uppercase;color:#6366f1;margin-bottom:6px;">
-            Author &amp; Free Customizations
-        </div>
-        <h2 style="font-size:26px;font-weight:800;margin:0;background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:#7c4dff;">
-            Built by</h2>
-        <p style="font-size:14px;color:#6b7091;margin:8px auto 0;max-width:560px;line-height:1.6;">Connect for free
-            customizations, collaboration, or explore more Odoo 18 apps from the same author.</p>
-    </div>
-
-    <div style="background:linear-gradient(135deg,#f4f5ff,#fdf4ff);border:1px solid #e8e6fb;border-radius:22px;padding:28px 24px;text-align:center;">
-        <div style="display:inline-block;width:68px;height:68px;border-radius:50%;background:linear-gradient(135deg,#6366f1,#a855f7,#ec4899);color:#ffffff;font-weight:800;font-size:23px;line-height:68px;box-shadow:0 8px 22px rgba(168,85,247,0.35);">
-            GU
-        </div>
-        <div style="font-size:19px;font-weight:800;color:#2b2743;margin:12px 0 4px;">Gardas Udaykiran</div>
-        <p style="font-size:13.5px;color:#6b7091;max-width:540px;margin:0 auto 16px;line-height:1.65;">I build and
-            publish open-source Odoo 18 apps — Contacts enrichment, Point of Sale tools, and login security. All of them
-            are on the Odoo Apps Store and in one GitHub repository.</p>
-        <div>
-            <a href="https://apps.odoo.com/apps/browse?repo_maintainer_id=1184648" target="_blank" rel="noopener"
-               style="display:inline-block;padding:11px 22px;margin:5px;border-radius:999px;color:#ffffff;font-weight:700;font-size:14px;text-decoration:none;background:linear-gradient(90deg,#6366f1,#a855f7);box-shadow:0 8px 20px rgba(99,102,241,0.28);">🧩
-                All my Odoo apps</a>
-            <a href="https://github.com/udaykiran712/uday_odoo_apps" target="_blank" rel="noopener"
-               style="display:inline-block;padding:11px 22px;margin:5px;border-radius:999px;color:#ffffff;font-weight:700;font-size:14px;text-decoration:none;background:linear-gradient(90deg,#a855f7,#ec4899);box-shadow:0 8px 20px rgba(168,85,247,0.28);">💻
-                GitHub repository</a>
-            <a href="https://www.linkedin.com/in/udaykirangardas/" target="_blank" rel="noopener"
-               style="display:inline-block;padding:11px 22px;margin:5px;border-radius:999px;color:#ffffff;font-weight:700;font-size:14px;text-decoration:none;background:linear-gradient(90deg,#0ea5e9,#6366f1);box-shadow:0 8px 20px rgba(14,165,233,0.28);">🔗
-                LinkedIn</a>
-            <a href="mailto:gardasudaykiran2001@gmail.com"
-               style="display:inline-block;padding:11px 22px;margin:5px;border-radius:999px;color:#ffffff;font-weight:700;font-size:14px;text-decoration:none;background:linear-gradient(90deg,#10b981,#06b6d4);box-shadow:0 8px 20px rgba(16,185,129,0.28);">✉️
-                Email for Customization</a>
-        </div>
-    </div>
-
-    <table border="0" cellpadding="0" cellspacing="0" width="100%"
-           style="border-collapse:separate;border-spacing:12px;margin-top:8px;">
-        <tr>
-            <td width="50%"
-                style="background:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #6366f1;border-radius:16px;padding:18px;vertical-align:top;">
-                <div style="font-weight:800;font-size:14.5px;color:#2b2743;margin-bottom:6px;">Email OTP Login</div>
-                <div style="font-size:12.5px;color:#6b7091;line-height:1.65;margin-bottom:12px;">Password-less login for
-                    Odoo 18 with hashed one-time email codes, rate limiting, group policies, and a live security
-                    dashboard.
-                </div>
-                <a href="https://apps.odoo.com/apps/modules/18.0/auth_otp_login" target="_blank" rel="noopener"
-                   style="display:inline-block;padding:8px 16px;border-radius:999px;color:#ffffff;font-weight:700;font-size:12.5px;text-decoration:none;background:linear-gradient(90deg,#6366f1,#a855f7);">View
-                    on Odoo Apps →</a>
-            </td>
-            <td width="50%"
-                style="background:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #ec4899;border-radius:16px;padding:18px;vertical-align:top;">
-                <div style="font-weight:800;font-size:14.5px;color:#2b2743;margin-bottom:6px;">POS Product Stock &amp;
-                    Price Display
-                </div>
-                <div style="font-size:12.5px;color:#6b7091;line-height:1.65;margin-bottom:12px;">Display dynamic sales
-                    price and real-time, location-specific stock on-hand directly on the Point of Sale product card with
-                    an out-of-stock blocker.
-                </div>
-                <a href="https://apps.odoo.com/apps/modules/18.0/pos_product_stock_price_display" target="_blank"
-                   rel="noopener"
-                   style="display:inline-block;padding:8px 16px;border-radius:999px;color:#ffffff;font-weight:700;font-size:12.5px;text-decoration:none;background:linear-gradient(90deg,#a855f7,#ec4899);">View
-                    on Odoo Apps →</a>
-            </td>
-        </tr>
-        <tr>
-            <td width="50%"
-                style="background:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #06b6d4;border-radius:16px;padding:18px;vertical-align:top;">
-                <div style="font-weight:800;font-size:14.5px;color:#2b2743;margin-bottom:6px;">POS User Access
-                    Restriction
-                </div>
-                <div style="font-size:12.5px;color:#6b7091;line-height:1.65;margin-bottom:12px;">Restrict POS users to
-                    specific Point of Sale shops or registers in Odoo 18 with enforced record rules.
-                </div>
-                <a href="https://apps.odoo.com/apps/modules/18.0/pos_access_restriction" target="_blank" rel="noopener"
-                   style="display:inline-block;padding:8px 16px;border-radius:999px;color:#ffffff;font-weight:700;font-size:12.5px;text-decoration:none;background:linear-gradient(90deg,#06b6d4,#10b981);">View
-                    on Odoo Apps →</a>
-            </td>
-            <td width="50%"
-                style="background:#ffffff;border:1px solid #e8e6fb;border-top:4px solid #f59e0b;border-radius:16px;padding:18px;vertical-align:top;">
-                <div style="font-weight:800;font-size:14.5px;color:#2b2743;margin-bottom:6px;">POS Auto Lot/Serial
-                    Selection
-                </div>
-                <div style="font-size:12.5px;color:#6b7091;line-height:1.65;margin-bottom:12px;">Automatically assigns
-                    the oldest lot/serial (FEFO/FIFO) in Point of Sale without popup interruptions.
-                </div>
-                <a href="https://apps.odoo.com/apps/modules/18.0/pos_auto_lot_fefo_selection" target="_blank"
-                   rel="noopener"
-                   style="display:inline-block;padding:8px 16px;border-radius:999px;color:#ffffff;font-weight:700;font-size:12.5px;text-decoration:none;background:linear-gradient(90deg,#f59e0b,#ec4899);">View
-                    on Odoo Apps →</a>
-            </td>
-        </tr>
-    </table>
-
-    <!-- ============================================================ -->
-    <!-- CLOSING                                                      -->
-    <!-- ============================================================ -->
-    <div style="text-align:center;margin-top:44px;padding:30px 28px;background:linear-gradient(135deg,#6366f1,#a855f7,#ec4899);border-radius:20px;">
-        <div style="font-size:19px;font-weight:800;color:#ffffff;margin-bottom:8px;">Built for real production use</div>
-        <div style="font-size:13.5px;color:#f0eefe;max-width:560px;margin:0 auto 14px;line-height:1.7;">Every feature on
-            this page is backed by recursion-safe Odoo 18 ORM logic, 1-click API connection verification, bounded
-            background cron batches, and 404 loop protection — not a demo shortcut.
-        </div>
-        <div style="font-size:13px;color:#ffffff;">
-            Questions, ideas or feature requests? Reach out on
-            <a href="https://www.linkedin.com/in/udaykirangardas/" target="_blank" rel="noopener"
-               style="color:#ffffff;font-weight:800;text-decoration:underline;">LinkedIn</a>,
-            <a href="https://github.com/udaykiran712/uday_odoo_apps" target="_blank" rel="noopener"
-               style="color:#ffffff;font-weight:800;text-decoration:underline;">GitHub</a>, or
-            <a href="mailto:gardasudaykiran2001@gmail.com"
-               style="color:#ffffff;font-weight:800;text-decoration:underline;">gardasudaykiran2001@gmail.com</a>.
-        </div>
-    </div>
-    <p style="text-align:center;font-size:12px;color:#a3a6cc;margin:18px 0 0;">Partner Logo Enrichment (Logo.dev)
-        &middot; v18.0.1.0.0 &middot; LGPL-3 &middot; &copy; Gardas Udaykiran</p>
+  </div>
+  <p style="text-align:center;font-size:12px;color:#6b7091;margin:18px 0 0;">Partner Logo Enrichment (Logo.dev) &middot; v18.0.1.0.0 &middot; LGPL-3 &middot; &copy; Gardas Udaykiran</p>
 
 </section>
