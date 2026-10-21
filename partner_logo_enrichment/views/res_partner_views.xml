@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_partner_form_inherit_logo_enrichment" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.partner.logo.enrichment</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_fetch_logo"
+                        type="object"
+                        string="Fetch Logo"
+                        class="oe_stat_button"
+                        icon="fa-image"
+                        invisible="not website and not email"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_fetch_partner_logos" model="ir.actions.server">
+        <field name="name">Fetch Partner Logos</field>
+        <field name="model_id" ref="base.model_res_partner"/>
+        <field name="binding_model_id" ref="base.model_res_partner"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="binding_type">action</field>
+        <field name="state">code</field>
+        <field name="code">action = records.action_fetch_logo()</field>
+    </record>
+</odoo>
