@@ -158,33 +158,33 @@
     <img src="reliability_banner.gif" alt="Built-in ORM reliability and safeguards" class="img img-fluid" style="width:100%;display:block;"/>
     <table border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse:separate;border-spacing:12px;">
       <tr>
-        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
-          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#6366f1;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>1-Click API connection tester</div>
-          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">Built-in <code style="color:#a5b4fc;">action_test_logo_dev_connection()</code> in Settings auto-persists your typed key and tests live connectivity against <code style="color:#a5b4fc;">img.logo.dev</code>.</div>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:18px 20px;vertical-align:top;">
+          <div style="font-weight:800;font-size:15px;color:#ffffff;margin-bottom:8px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#6366f1;color:#ffffff;font-size:13px;line-height:24px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>1-Click API connection tester</div>
+          <div style="font-size:13.5px;color:#f1f5f9;line-height:1.65;">Built-in <span style="font-family:monospace;font-weight:700;color:#38bdf8;">action_test_logo_dev_connection()</span> in Settings auto-persists your typed key and tests live connectivity against <span style="font-family:monospace;font-weight:700;color:#38bdf8;">img.logo.dev</span>.</div>
         </td>
-        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
-          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#a855f7;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Recursion-safe context guard</div>
-          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">All internal updates use <code style="color:#a5b4fc;">with_context(skip_logo_fetch=True)</code> so writing <code style="color:#a5b4fc;">image_1920</code> never re-triggers <code style="color:#a5b4fc;">write()</code> recursively.</div>
-        </td>
-      </tr>
-      <tr>
-        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
-          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#ec4899;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Smart 404 handling</div>
-          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">When Logo.dev returns HTTP 404, the partner is marked <code style="color:#a5b4fc;">not_found</code> and <code style="color:#a5b4fc;">logo_fetch_pending=False</code> to prevent endless cron retries.</div>
-        </td>
-        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
-          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#06b6d4;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Bounded 50-record cron batches</div>
-          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">The 15-minute scheduled action processes up to 50 pending partners per run so worker threads never hit timeouts on large imports.</div>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:18px 20px;vertical-align:top;">
+          <div style="font-weight:800;font-size:15px;color:#ffffff;margin-bottom:8px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#a855f7;color:#ffffff;font-size:13px;line-height:24px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Recursion-safe context guard</div>
+          <div style="font-size:13.5px;color:#f1f5f9;line-height:1.65;">All internal updates use <span style="font-family:monospace;font-weight:700;color:#38bdf8;">with_context(skip_logo_fetch=True)</span> so writing <span style="font-family:monospace;font-weight:700;color:#38bdf8;">image_1920</span> never re-triggers <span style="font-family:monospace;font-weight:700;color:#38bdf8;">write()</span> recursively.</div>
         </td>
       </tr>
       <tr>
-        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
-          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#f59e0b;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Multi-record &amp; batch safe</div>
-          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">Uses <code style="color:#a5b4fc;">@api.model_create_multi</code> and iterates recordsets safely in <code style="color:#a5b4fc;">write()</code> and <code style="color:#a5b4fc;">action_fetch_logo()</code> without singleton errors.</div>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:18px 20px;vertical-align:top;">
+          <div style="font-weight:800;font-size:15px;color:#ffffff;margin-bottom:8px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#ec4899;color:#ffffff;font-size:13px;line-height:24px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Smart 404 handling</div>
+          <div style="font-size:13.5px;color:#f1f5f9;line-height:1.65;">When Logo.dev returns HTTP 404, the partner is marked <span style="font-family:monospace;font-weight:700;color:#fbbf24;">not_found</span> and <span style="font-family:monospace;font-weight:700;color:#fbbf24;">logo_fetch_pending=False</span> to prevent endless cron retries.</div>
         </td>
-        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:16px 18px;vertical-align:top;">
-          <div style="font-weight:800;font-size:14px;color:#ffffff;margin-bottom:6px;"><span style="display:inline-block;width:22px;height:22px;border-radius:50%;background-color:#10b981;color:#ffffff;font-size:13px;line-height:22px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Instant UI toast &amp; soft reload</div>
-          <div style="font-size:12.5px;color:#cbd5e1;line-height:1.6;">Manual fetches return a <code style="color:#a5b4fc;">display_notification</code> client action chained with <code style="color:#a5b4fc;">soft_reload</code> so the new logo appears immediately.</div>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:18px 20px;vertical-align:top;">
+          <div style="font-weight:800;font-size:15px;color:#ffffff;margin-bottom:8px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#06b6d4;color:#ffffff;font-size:13px;line-height:24px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Bounded 50-record cron batches</div>
+          <div style="font-size:13.5px;color:#f1f5f9;line-height:1.65;">The 15-minute scheduled action processes up to <span style="font-family:monospace;font-weight:700;color:#4ade80;">50 pending partners</span> per run so worker threads never hit timeouts on large imports.</div>
+        </td>
+      </tr>
+      <tr>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:18px 20px;vertical-align:top;">
+          <div style="font-weight:800;font-size:15px;color:#ffffff;margin-bottom:8px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#f59e0b;color:#ffffff;font-size:13px;line-height:24px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Multi-record &amp; batch safe</div>
+          <div style="font-size:13.5px;color:#f1f5f9;line-height:1.65;">Uses <span style="font-family:monospace;font-weight:700;color:#fbbf24;">@api.model_create_multi</span> and iterates recordsets safely in <span style="font-family:monospace;font-weight:700;color:#fbbf24;">write()</span> and <span style="font-family:monospace;font-weight:700;color:#fbbf24;">action_fetch_logo()</span> without singleton errors.</div>
+        </td>
+        <td width="50%" style="background-color:#1d1940;border:1px solid #3b3578;border-radius:14px;padding:18px 20px;vertical-align:top;">
+          <div style="font-weight:800;font-size:15px;color:#ffffff;margin-bottom:8px;"><span style="display:inline-block;width:24px;height:24px;border-radius:50%;background-color:#10b981;color:#ffffff;font-size:13px;line-height:24px;text-align:center;font-weight:800;margin-right:8px;">&#10003;</span>Instant UI toast &amp; soft reload</div>
+          <div style="font-size:13.5px;color:#f1f5f9;line-height:1.65;">Manual fetches return a <span style="font-family:monospace;font-weight:700;color:#4ade80;">display_notification</span> client action chained with <span style="font-family:monospace;font-weight:700;color:#4ade80;">soft_reload</span> so the new logo appears immediately.</div>
         </td>
       </tr>
     </table>
