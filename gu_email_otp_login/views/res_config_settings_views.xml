@@ -6,7 +6,7 @@
         <field name="inherit_id" ref="base.res_config_settings_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//block[@id='user_default_rights']" position="after">
-                <block title="Email OTP Login" id="auth_otp_login_settings" groups="base.group_system">
+                <block title="Email OTP Login" id="gu_email_otp_login_settings" groups="base.group_system">
                     <setting id="otp_login_blocked_group_setting"
                              string="Who is blocked from OTP login"
                              help="Users in these groups will not be able to use the 'Login with Email OTP' option - they'll need their password. Leave empty to allow everyone.">

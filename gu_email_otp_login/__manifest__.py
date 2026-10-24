@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of auth_otp_login. See LICENSE file for full copyright and licensing details.
+# Part of gu_email_otp_login. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Email OTP Login',
     'version': '18.0.1.0.0',
@@ -39,7 +39,7 @@ Security highlights
   that user.
     """,
     'author': 'Gardas Udaykiran',
-    'website': 'https://github.com/udaykiran712',
+    'website': 'https://www.linkedin.com/in/udaykirangardas/',
     'license': 'LGPL-3',
     'images': ['static/description/banner.png'],
     'depends': [

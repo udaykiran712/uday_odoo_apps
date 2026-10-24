@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of auth_otp_login. See LICENSE file for full copyright and licensing details.
+# Part of gu_email_otp_login. See LICENSE file for full copyright and licensing details.
 
 import logging
 
@@ -132,7 +132,7 @@ class ResUsers(models.Model):
 
         _otp_record, plaintext_otp = self.env['res.users.otp']._generate_otp(self)
 
-        template = self.env.ref('auth_otp_login.mail_template_otp', raise_if_not_found=False)
+        template = self.env.ref('gu_email_otp_login.mail_template_otp', raise_if_not_found=False)
         if not template:
             raise UserError(_('The OTP email template is not configured.'))
 
@@ -156,7 +156,7 @@ class ResUsers(models.Model):
         if not email_from:
             raise UserError(_('No sender email address is configured.'))
 
-        template = self.env.ref('auth_otp_login.mail_template_otp_unknown', raise_if_not_found=False)
+        template = self.env.ref('gu_email_otp_login.mail_template_otp_unknown', raise_if_not_found=False)
         if not template:
             raise UserError(_('The "email not registered" template is not configured.'))
 
@@ -187,7 +187,7 @@ class ResUsers(models.Model):
         if not email_from:
             raise UserError(_('No sender email address is configured.'))
 
-        template = self.env.ref('auth_otp_login.mail_template_otp_not_allowed', raise_if_not_found=False)
+        template = self.env.ref('gu_email_otp_login.mail_template_otp_not_allowed', raise_if_not_found=False)
         if not template:
             raise UserError(_('The "OTP not allowed" template is not configured.'))
 

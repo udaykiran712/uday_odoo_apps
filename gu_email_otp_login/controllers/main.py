@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of auth_otp_login. See LICENSE file for full copyright and licensing details.
+# Part of gu_email_otp_login. See LICENSE file for full copyright and licensing details.
 
 import logging
 
@@ -39,7 +39,7 @@ class AuthOtpLogin(http.Controller):
             'login': login or '',
             'redirect': redirect,
         }
-        return request.render('auth_otp_login.otp_request_template', values)
+        return request.render('gu_email_otp_login.otp_request_template', values)
 
     # ------------------------------------------------------------------
     # Step 2: generate + send the OTP, move to the "enter code" step
@@ -53,7 +53,7 @@ class AuthOtpLogin(http.Controller):
 
         if not login:
             values['error'] = _('Please enter your email address.')
-            return request.render('auth_otp_login.otp_request_template', values)
+            return request.render('gu_email_otp_login.otp_request_template', values)
 
         user = request.env['res.users'].sudo()._otp_find_user(login)
         if user and user.sudo()._otp_is_allowed():
@@ -81,7 +81,7 @@ class AuthOtpLogin(http.Controller):
         values['message'] = _('If an account exists for %s, a login code has been sent to it.') % login
         values['resend_wait_seconds'] = self._otp_resend_wait_for(login)
         values['otp_code_length'] = self._otp_code_length_for(login)
-        return request.render('auth_otp_login.otp_verify_template', values)
+        return request.render('gu_email_otp_login.otp_verify_template', values)
 
     # ------------------------------------------------------------------
     # Step 3: verify the OTP and log the user in
@@ -97,7 +97,7 @@ class AuthOtpLogin(http.Controller):
             values['error'] = _('Please enter the code sent to your email.')
             values['resend_wait_seconds'] = self._otp_resend_wait_for(login)
             values['otp_code_length'] = self._otp_code_length_for(login)
-            return request.render('auth_otp_login.otp_verify_template', values)
+            return request.render('gu_email_otp_login.otp_verify_template', values)
 
         credential = {'login': login, 'otp': otp.strip(), 'type': 'otp'}
         try:
@@ -106,7 +106,7 @@ class AuthOtpLogin(http.Controller):
             values['error'] = exc.args[0] if exc.args else _('Invalid or expired code. Please try again.')
             values['resend_wait_seconds'] = self._otp_resend_wait_for(login)
             values['otp_code_length'] = self._otp_code_length_for(login)
-            return request.render('auth_otp_login.otp_verify_template', values)
+            return request.render('gu_email_otp_login.otp_verify_template', values)
 
         request.params['login_success'] = True
         return request.redirect(_get_login_redirect_url(auth_info['uid'], redirect=redirect))

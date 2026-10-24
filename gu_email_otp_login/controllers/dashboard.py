@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Part of auth_otp_login. See LICENSE file for full copyright and licensing details.
+# Part of gu_email_otp_login. See LICENSE file for full copyright and licensing details.
 
 import json
 from datetime import timedelta
@@ -29,7 +29,7 @@ class AuthOtpDashboard(http.Controller):
     @http.route('/otp/dashboard', type='http', auth='user', website=False, sitemap=False)
     def dashboard(self, **kw):
         self._check_access()
-        return request.render('auth_otp_login.otp_dashboard_template', {})
+        return request.render('gu_email_otp_login.otp_dashboard_template', {})
 
     @http.route('/otp/dashboard/data', type='http', auth='user', methods=['GET'],
                 website=False, sitemap=False)
