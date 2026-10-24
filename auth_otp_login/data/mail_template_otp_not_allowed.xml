@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mail_template_otp_not_allowed" model="mail.template">
+        <field name="name">Email OTP Login: Not Allowed Notice</field>
+        <field name="model_id" ref="base.model_res_users"/>
+        <field name="subject">🔒 OTP login isn't available for your account</field>
+        <field name="email_to">{{ object.email }}</field>
+        <field name="lang">{{ object.lang }}</field>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html" type="html">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f1f1f8"
+                   style="background-color:#f1f1f8; padding:40px 0; font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+                <tr>
+                    <td align="center">
+                        <table border="0" cellpadding="0" cellspacing="0" width="480"
+                               style="max-width:480px; background-color:#ffffff; border-radius:20px; overflow:hidden; box-shadow:0 12px 40px rgba(8,145,178,0.16);">
+
+                            <tr>
+                                <td align="center" bgcolor="#0891b2"
+                                    style="background:linear-gradient(135deg,#0891b2,#06b6d4); background-color:#0891b2; padding:32px 32px 28px;">
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td align="center" bgcolor="#ffffff"
+                                                style="background-color:#ffffff; border-radius:14px; width:52px; height:52px; font-size:26px; line-height:52px;">
+                                                🔒
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div style="color:#ffffff; font-size:16px; font-weight:700; margin-top:14px;">
+                                        <t t-out="object.company_id.name or 'Your Account'"/>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:32px;">
+                                    <p style="margin:0 0 6px 0; font-size:17px; font-weight:700; color:#1e1b3a;">
+                                        Hi
+                                        <t t-out="object.name or object.login"/>
+                                        👋
+                                    </p>
+                                    <p style="margin:0 0 24px 0; font-size:14px; color:#6b7091; line-height:1.65;">
+                                        Someone just tried to log in to your account using the
+                                        "Login with Email OTP" option.
+                                    </p>
+
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                           style="border-radius:16px; overflow:hidden; border:1px solid #cceef4;">
+                                        <tr>
+                                            <td height="4" bgcolor="#0891b2"
+                                                style="background:linear-gradient(90deg,#0891b2,#06b6d4); background-color:#0891b2; font-size:1px; line-height:4px;">
+                                                &#160;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" bgcolor="#f0fbfd"
+                                                style="background-color:#f0fbfd; padding:22px 20px;">
+                                                <span style="font-size:15px; color:#155e75; line-height:1.6;">
+                                                    OTP login isn't enabled for your account.
+                                                    <br/>
+                                                    Please log in with your <strong>password</strong> instead.
+                                                </span>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <p style="margin:20px 0 0 0; font-size:13px; color:#6b7091; line-height:1.6;">
+                                        💡 If you believe this should be available to you, contact your administrator.
+                                    </p>
+
+                                    <hr style="border:none; border-top:1px solid #eeeef7; margin:24px 0;"/>
+
+                                    <p style="margin:0; font-size:13px; color:#8b8fb0; line-height:1.6;">
+                                        🛡️ Wasn't you? No action is needed — no OTP was sent, and your
+                                        password remains the only way to sign in.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:16px 32px; background-color:#faf9ff; border-top:1px solid #eeeef7;">
+                                    <p style="margin:0; font-size:11px; color:#a3a3c4;">
+                                        This is an automated message — please don't reply to this email.
+                                    </p>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </field>
+    </record>
+</odoo>

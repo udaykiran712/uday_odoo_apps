@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="action_otp_dashboard" model="ir.actions.act_url">
+        <field name="name">OTP Security Dashboard</field>
+        <field name="target">new</field>
+        <field name="url">/otp/dashboard</field>
+    </record>
+
+    <menuitem id="menu_otp_dashboard"
+              name="OTP Security"
+              parent="base.menu_administration"
+              action="action_otp_dashboard"
+              groups="base.group_system"
+              sequence="4"/>
+</odoo>

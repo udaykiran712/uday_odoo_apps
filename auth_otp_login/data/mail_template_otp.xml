@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mail_template_otp" model="mail.template">
+        <field name="name">Email OTP Login: Verification Code</field>
+        <field name="model_id" ref="base.model_res_users"/>
+        <field name="subject">🔐 Your one-time login code</field>
+        <field name="email_to">{{ object.email }}</field>
+        <field name="lang">{{ object.lang }}</field>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html" type="html">
+            <table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="#f1f1f8"
+                   style="background-color:#f1f1f8; padding:40px 0; font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;">
+                <tr>
+                    <td align="center">
+                        <table border="0" cellpadding="0" cellspacing="0" width="480"
+                               style="max-width:480px; background-color:#ffffff; border-radius:20px; overflow:hidden; box-shadow:0 12px 40px rgba(99,102,241,0.16);">
+
+                            <tr>
+                                <td align="center" bgcolor="#6366f1"
+                                    style="background:linear-gradient(135deg,#6366f1,#a855f7,#ec4899); background-color:#6366f1; padding:32px 32px 28px;">
+                                    <table border="0" cellpadding="0" cellspacing="0">
+                                        <tr>
+                                            <td align="center" bgcolor="#ffffff"
+                                                style="background-color:#ffffff; border-radius:14px; width:52px; height:52px; font-size:26px; line-height:52px;">
+                                                🔐
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <div style="color:#ffffff; font-size:16px; font-weight:700; margin-top:14px;">
+                                        <t t-out="object.company_id.name or 'Your Account'"/>
+                                    </div>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:32px;">
+                                    <p style="margin:0 0 6px 0; font-size:17px; font-weight:700; color:#1e1b3a;">
+                                        Hi
+                                        <t t-out="object.name or object.login"/>
+                                        👋
+                                    </p>
+                                    <p style="margin:0 0 24px 0; font-size:14px; color:#6b7091; line-height:1.65;">
+                                        Use the code below to log in. No password needed —
+                                        just enter it on the login screen.
+                                    </p>
+
+                                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                                           style="border-radius:16px; overflow:hidden; border:1px solid #e4e4f6;">
+                                        <tr>
+                                            <td height="4" bgcolor="#6366f1"
+                                                style="background:linear-gradient(90deg,#6366f1,#a855f7,#ec4899); background-color:#6366f1; font-size:1px; line-height:4px;">
+                                                &#160;
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td align="center" bgcolor="#f5f5fe"
+                                                style="background-color:#f5f5fe; padding:26px 20px;">
+                                                <span style="font-size:12px; font-weight:700; letter-spacing:1.5px; color:#8b8fc7; text-transform:uppercase;">
+                                                    Your Login Code
+                                                </span>
+                                                <div style="margin-top:12px; font-size:36px; font-weight:800; letter-spacing:10px; color:#4338ca; font-family:'Courier New',monospace;">
+                                                    <t t-out="ctx.get('otp_code')"/>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <p style="margin:20px 0 0 0; font-size:13px; color:#6b7091;">
+                                        ⏰ Expires in <strong style="color:#1e1b3a;">10 minutes</strong> and can only be
+                                        used once.
+                                    </p>
+
+                                    <hr style="border:none; border-top:1px solid #eeeef7; margin:24px 0;"/>
+
+                                    <p style="margin:0; font-size:13px; color:#8b8fb0; line-height:1.6;">
+                                        🛡️ Didn't request this code? No action needed — your account is
+                                        still safe, and no one can access it without this code.
+                                    </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="padding:16px 32px; background-color:#faf9ff; border-top:1px solid #eeeef7;">
+                                    <p style="margin:0; font-size:11px; color:#a3a3c4;">
+                                        This is an automated message — please don't reply to this email.
+                                    </p>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </field>
+    </record>
+</odoo>

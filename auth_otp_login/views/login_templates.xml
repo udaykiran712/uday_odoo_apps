@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="web_login_otp_option" inherit_id="web.login" name="Email OTP Login option">
+        <xpath expr="//div[hasclass('o_login_auth')]" position="inside">
+            <em class="d-block text-center text-muted small my-2">- or -</em>
+            <a role="button" t-attf-href="/web/login/otp?{{ keep_query('login', 'redirect') }}"
+               class="btn btn-secondary w-100">
+                Login with Email OTP
+            </a>
+        </xpath>
+    </template>
+
+    <!-- ================================================================
+         Light, modern SaaS-style login pages - deliberately a different
+         visual language from the dark OTP Security Dashboard (that one
+         is for admins monitoring a system; this one is for every user,
+         every login, so it needs to feel welcoming, not like a command
+         center). Self-contained, no external CDN/library.
+    ================================================================= -->
+
+    <template id="otp_request_template" name="Email OTP Login: Request Code">
+        &lt;!DOCTYPE html&gt;
+        <html>
+            <head>
+                <meta charset="utf-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <title>Login with Email OTP</title>
+                <style>
+                    :root {
+                    --c1: #6366f1;
+                    --c2: #a855f7;
+                    --c3: #ec4899;
+                    --ink: #1e1b3a;
+                    --muted: #6b7091;
+                    }
+                    * { box-sizing: border-box; margin: 0; padding: 0; }
+                    html, body { height: 100%; }
+                    body {
+                    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    color: var(--ink);
+                    background: linear-gradient(135deg, #eef2ff 0%, #fdf4ff 50%, #ecfdf5 100%);
+                    background-size: 280% 280%;
+                    animation: bgShift 20s ease infinite;
+                    min-height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 24px;
+                    position: relative;
+                    overflow-x: hidden;
+                    }
+                    @keyframes bgShift {
+                    0%, 100% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    }
+                    .blob {
+                    position: fixed;
+                    border-radius: 50%;
+                    filter: blur(70px);
+                    opacity: 0.45;
+                    z-index: 0;
+                    pointer-events: none;
+                    }
+                    .blob-1 { width: 340px; height: 340px; background: #c7d2fe; top: -80px; left: -60px; animation:
+                    floatA 15s ease-in-out infinite; }
+                    .blob-2 { width: 300px; height: 300px; background: #fbcfe8; bottom: -90px; right: -50px; animation:
+                    floatB 18s ease-in-out infinite; }
+                    .blob-3 { width: 220px; height: 220px; background: #a7f3d0; top: 60%; left: 65%; animation: floatA
+                    22s ease-in-out infinite; }
+                    @keyframes floatA {
+                    0%, 100% { transform: translate(0,0); }
+                    50% { transform: translate(25px,-30px); }
+                    }
+                    @keyframes floatB {
+                    0%, 100% { transform: translate(0,0); }
+                    50% { transform: translate(-30px,25px); }
+                    }
+                    .card {
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    max-width: 420px;
+                    background: rgba(255,255,255,0.78);
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    border: 1px solid rgba(255,255,255,0.9);
+                    border-radius: 28px;
+                    box-shadow: 0 20px 60px rgba(99,102,241,0.18), 0 2px 8px rgba(0,0,0,0.04);
+                    padding: 40px 34px;
+                    animation: cardIn 0.6s cubic-bezier(.2,.8,.2,1);
+                    transition: transform 0.15s ease;
+                    transform-style: preserve-3d;
+                    }
+                    @keyframes cardIn {
+                    from { opacity: 0; transform: translateY(18px) scale(0.97); }
+                    to { opacity: 1; transform: translateY(0) scale(1); }
+                    }
+                    .logo-ring {
+                    max-width: 160px; height: 56px;
+                    margin: 0 auto 14px;
+                    padding: 8px 14px;
+                    border-radius: 16px;
+                    background: linear-gradient(135deg, var(--c1), var(--c2), var(--c3));
+                    box-shadow: 0 8px 20px rgba(168,85,247,0.3);
+                    display: flex; align-items: center; justify-content: center;
+                    }
+                    .logo-ring img { max-width: 100%; max-height: 100%; object-fit: contain; display: block; }
+                    display: block; }
+                    .icon-bounce { text-align: center; font-size: 30px; margin-bottom: 2px; animation: bounceIn 0.7s
+                    cubic-bezier(.34,1.56,.64,1) 0.2s both; }
+                    @keyframes bounceIn {
+                    0% { transform: scale(0.3); opacity: 0; }
+                    60% { transform: scale(1.15); opacity: 1; }
+                    100% { transform: scale(1); }
+                    }
+                    h1.title {
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: 800;
+                    margin-bottom: 8px;
+                    background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    }
+                    p.subtitle {
+                    text-align: center;
+                    font-size: 13.5px;
+                    color: var(--muted);
+                    line-height: 1.6;
+                    margin-bottom: 26px;
+                    }
+                    label.field-label {
+                    display: block;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.8px;
+                    color: var(--muted);
+                    margin-bottom: 8px;
+                    }
+                    .input-wrap { position: relative; margin-bottom: 22px; }
+                    .input-wrap .icon { position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+                    font-size: 16px; opacity: 0.6; }
+                    input.otp-input {
+                    width: 100%;
+                    padding: 14px 16px 14px 40px;
+                    font-size: 15px;
+                    color: var(--ink);
+                    background: #ffffff;
+                    border: 1.5px solid #e4e4f6;
+                    border-radius: 14px;
+                    outline: none;
+                    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+                    }
+                    input.otp-input::placeholder { color: #b3b6d6; }
+                    input.otp-input:focus {
+                    border-color: var(--c1);
+                    box-shadow: 0 0 0 4px rgba(99,102,241,0.14);
+                    }
+                    button.btn-glow {
+                    width: 100%;
+                    padding: 14px;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #ffffff;
+                    background: linear-gradient(90deg, var(--c1), var(--c2));
+                    border: none;
+                    border-radius: 14px;
+                    cursor: pointer;
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    box-shadow: 0 10px 24px rgba(99,102,241,0.35);
+                    }
+                    button.btn-glow:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(99,102,241,0.45);
+                    }
+                    button.btn-glow:active { transform: translateY(-1px); }
+                    .link-row { text-align: center; margin-top: 16px; }
+                    .link-row a { color: #7b7fc4; font-size: 13px; text-decoration: none; transition: color 0.2s ease; }
+                    .link-row a:hover { color: var(--c1); }
+                    .alert-glass {
+                    padding: 13px 16px;
+                    border-radius: 14px;
+                    font-size: 13px;
+                    line-height: 1.5;
+                    margin-bottom: 20px;
+                    }
+                    .alert-danger-glass { background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; }
+                </style>
+            </head>
+            <body>
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+
+                <div class="card" id="loginCard">
+                    <div class="logo-ring">
+                        <img src="/web/binary/company_logo" alt="Logo"/>
+                    </div>
+                    <div class="icon-bounce">🔐</div>
+                    <h1 class="title">Login with Email OTP</h1>
+                    <p class="subtitle">
+                        Enter your email address and we'll send you a one-time
+                        login code. No password required.
+                    </p>
+
+                    <form method="post" action="/web/login/otp/send">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="redirect" t-att-value="redirect"/>
+
+                        <label class="field-label" for="login">Email</label>
+                        <div class="input-wrap">
+                            <span class="icon">✉️</span>
+                            <input type="text" placeholder="you@company.com" name="login" t-att-value="login"
+                                   id="login" class="otp-input" required="required"
+                                   autocapitalize="off" autocomplete="username" autofocus="autofocus"/>
+                        </div>
+
+                        <p class="alert-glass alert-danger-glass" t-if="error" role="alert">
+                            <t t-esc="error"/>
+                        </p>
+
+                        <button type="submit" class="btn-glow">Send Code</button>
+                        <div class="link-row">
+                            <a href="/web/login">Back to password login</a>
+                        </div>
+                    </form>
+                </div>
+
+                <script>
+                    var card = document.getElementById('loginCard');
+                    card.addEventListener('mousemove', function (e) {
+                    var rect = card.getBoundingClientRect();
+                    var x = e.clientX - rect.left;
+                    var y = e.clientY - rect.top;
+                    var rx = ((y - rect.height / 2) / rect.height) * -6;
+                    var ry = ((x - rect.width / 2) / rect.width) * 6;
+                    card.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg)';
+                    });
+                    card.addEventListener('mouseleave', function () {
+                    card.style.transform = 'perspective(900px) rotateX(0deg) rotateY(0deg)';
+                    });
+                </script>
+            </body>
+        </html>
+    </template>
+
+    <!-- ================================================================
+         Step 2: individual digit boxes with auto-advance, combined into
+         one hidden field before submit (the backend still just receives
+         a single "otp" value - the box UI is purely front-end). Lines
+         kept short throughout on purpose: one overlong line breaking
+         mid-string is exactly what caused the dashboard bug earlier.
+    ================================================================= -->
+    <template id="otp_verify_template" name="Email OTP Login: Verify Code">
+        &lt;!DOCTYPE html&gt;
+        <html>
+            <head>
+                <meta charset="utf-8"/>
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+                <title>Verify Your Code</title>
+                <style>
+                    :root {
+                    --c1: #6366f1;
+                    --c2: #a855f7;
+                    --c3: #ec4899;
+                    --ink: #1e1b3a;
+                    --muted: #6b7091;
+                    }
+                    * { box-sizing: border-box; margin: 0; padding: 0; }
+                    html, body { height: 100%; }
+                    body {
+                    font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+                    color: var(--ink);
+                    background: linear-gradient(135deg, #eef2ff 0%, #fdf4ff 50%, #ecfdf5 100%);
+                    background-size: 280% 280%;
+                    animation: bgShift 20s ease infinite;
+                    min-height: 100vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 24px;
+                    position: relative;
+                    overflow-x: hidden;
+                    }
+                    @keyframes bgShift {
+                    0%, 100% { background-position: 0% 50%; }
+                    50% { background-position: 100% 50%; }
+                    }
+                    .blob {
+                    position: fixed;
+                    border-radius: 50%;
+                    filter: blur(70px);
+                    opacity: 0.45;
+                    z-index: 0;
+                    pointer-events: none;
+                    }
+                    .blob-1 { width: 340px; height: 340px; background: #c7d2fe; top: -80px; left: -60px; animation:
+                    floatA 15s ease-in-out infinite; }
+                    .blob-2 { width: 300px; height: 300px; background: #fbcfe8; bottom: -90px; right: -50px; animation:
+                    floatB 18s ease-in-out infinite; }
+                    .blob-3 { width: 220px; height: 220px; background: #a7f3d0; top: 60%; left: 65%; animation: floatA
+                    22s ease-in-out infinite; }
+                    @keyframes floatA {
+                    0%, 100% { transform: translate(0,0); }
+                    50% { transform: translate(25px,-30px); }
+                    }
+                    @keyframes floatB {
+                    0%, 100% { transform: translate(0,0); }
+                    50% { transform: translate(-30px,25px); }
+                    }
+                    .card {
+                    position: relative;
+                    z-index: 1;
+                    width: 100%;
+                    max-width: 440px;
+                    background: rgba(255,255,255,0.78);
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    border: 1px solid rgba(255,255,255,0.9);
+                    border-radius: 28px;
+                    box-shadow: 0 20px 60px rgba(99,102,241,0.18), 0 2px 8px rgba(0,0,0,0.04);
+                    padding: 40px 34px;
+                    animation: cardIn 0.6s cubic-bezier(.2,.8,.2,1);
+                    }
+                    @keyframes cardIn {
+                    from { opacity: 0; transform: translateY(18px) scale(0.97); }
+                    to { opacity: 1; transform: translateY(0) scale(1); }
+                    }
+                    .icon-bounce { text-align: center; font-size: 30px; margin-bottom: 4px; animation: bounceIn 0.7s
+                    cubic-bezier(.34,1.56,.64,1) 0.2s both; }
+                    @keyframes bounceIn {
+                    0% { transform: scale(0.3); opacity: 0; }
+                    60% { transform: scale(1.15); opacity: 1; }
+                    100% { transform: scale(1); }
+                    }
+                    h1.title {
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: 800;
+                    margin-bottom: 6px;
+                    background: linear-gradient(90deg, var(--c1), var(--c2), var(--c3));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    }
+                    p.subtitle { text-align: center; font-size: 13px; color: var(--muted); margin-bottom: 24px; }
+                    .box-row {
+                    display: flex;
+                    gap: 8px;
+                    justify-content: center;
+                    margin-bottom: 22px;
+                    }
+                    .box-row.shake { animation: shake 0.4s ease; }
+                    @keyframes shake {
+                    0%, 100% { transform: translateX(0); }
+                    20% { transform: translateX(-8px); }
+                    40% { transform: translateX(8px); }
+                    60% { transform: translateX(-6px); }
+                    80% { transform: translateX(6px); }
+                    }
+                    .otp-box {
+                    width: 44px;
+                    height: 54px;
+                    text-align: center;
+                    font-size: 22px;
+                    font-weight: 700;
+                    color: var(--ink);
+                    background: #ffffff;
+                    border: 1.5px solid #e4e4f6;
+                    border-radius: 12px;
+                    outline: none;
+                    transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.15s ease;
+                    }
+                    .otp-box:focus {
+                    border-color: var(--c1);
+                    box-shadow: 0 0 0 4px rgba(99,102,241,0.14);
+                    transform: translateY(-2px);
+                    }
+                    button.btn-glow {
+                    width: 100%;
+                    padding: 14px;
+                    font-size: 15px;
+                    font-weight: 700;
+                    color: #ffffff;
+                    background: linear-gradient(90deg, var(--c1), var(--c2));
+                    border: none;
+                    border-radius: 14px;
+                    cursor: pointer;
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    box-shadow: 0 10px 24px rgba(99,102,241,0.35);
+                    margin-bottom: 14px;
+                    }
+                    button.btn-glow:hover { transform: translateY(-3px); box-shadow: 0 14px 32px rgba(99,102,241,0.45);
+                    }
+                    button.btn-resend {
+                    width: 100%;
+                    padding: 11px;
+                    font-size: 13px;
+                    font-weight: 600;
+                    color: var(--muted);
+                    background: #f5f5fc;
+                    border: 1px solid #e4e4f6;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    transition: border-color 0.2s ease, color 0.2s ease;
+                    margin-bottom: 10px;
+                    }
+                    button.btn-resend:hover:not(:disabled) { border-color: var(--c1); color: var(--c1); }
+                    button.btn-resend:disabled { opacity: 0.55; cursor: not-allowed; }
+                    .link-row { text-align: center; margin-top: 6px; }
+                    .link-row a { color: #7b7fc4; font-size: 13px; text-decoration: none; transition: color 0.2s ease; }
+                    .link-row a:hover { color: var(--c1); }
+                    .alert-glass { padding: 13px 16px; border-radius: 14px; font-size: 13px; line-height: 1.5;
+                    margin-bottom: 20px; }
+                    .alert-danger-glass { background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; }
+                    .alert-success-glass { background: #ecfdf5; border: 1px solid #a7f3d0; color: #047857; }
+                </style>
+            </head>
+            <body>
+                <div class="blob blob-1"></div>
+                <div class="blob blob-2"></div>
+                <div class="blob blob-3"></div>
+
+                <div class="card">
+                    <div class="icon-bounce">📬</div>
+                    <h1 class="title">Enter Your Code</h1>
+                    <p class="subtitle">Check your email for the code</p>
+
+                    <p class="alert-glass alert-success-glass" t-if="message" role="status">
+                        <t t-esc="message"/>
+                    </p>
+
+                    <form method="post" action="/web/login/otp/verify" id="otpForm">
+                        <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+                        <input type="hidden" name="login" t-att-value="login"/>
+                        <input type="hidden" name="redirect" t-att-value="redirect"/>
+                        <input type="hidden" name="otp" id="otp_combined"/>
+
+                        <div class="box-row" id="boxRow" t-att-data-error="1 if error else 0">
+                            <t t-foreach="range(otp_code_length or 6)" t-as="i">
+                                <input type="text" inputmode="numeric" pattern="[0-9]*"
+                                       maxlength="1" class="otp-box"
+                                       t-att-autofocus="'autofocus' if i == 0 else None"/>
+                            </t>
+                        </div>
+
+                        <p class="alert-glass alert-danger-glass" t-if="error" role="alert">
+                            <t t-esc="error"/>
+                        </p>
+
+                        <button type="submit" class="btn-glow">Verify &amp; Log in</button>
+                        <button type="submit" formaction="/web/login/otp/send" formnovalidate="formnovalidate"
+                                id="otp_resend_btn" class="btn-resend"
+                                t-att-disabled="'disabled' if resend_wait_seconds else None">
+                            <t t-if="resend_wait_seconds">Resend code (<t t-out="resend_wait_seconds"/>s)
+                            </t>
+                            <t t-else="">Resend code</t>
+                        </button>
+                        <div class="link-row">
+                            <a href="/web/login">Back to password login</a>
+                        </div>
+                    </form>
+                </div>
+
+                <script>
+                    var boxes = document.querySelectorAll('.otp-box');
+                    var hidden = document.getElementById('otp_combined');
+                    var form = document.getElementById('otpForm');
+                    var boxRow = document.getElementById('boxRow');
+
+                    function combine() {
+                    var val = '';
+                    for (var i = 0; i &lt; boxes.length; i++) {
+                    val += boxes[i].value;
+                    }
+                    hidden.value = val;
+                    }
+
+                    for (var i = 0; i &lt; boxes.length; i++) {
+                    (function (idx) {
+                    boxes[idx].addEventListener('input', function () {
+                    this.value = this.value.replace(/[^0-9]/g, '');
+                    if (this.value &amp;&amp; idx &lt; boxes.length - 1) {
+                    boxes[idx + 1].focus();
+                    }
+                    combine();
+                    });
+                    boxes[idx].addEventListener('keydown', function (e) {
+                    var isBackspace = e.key === 'Backspace';
+                    if (isBackspace &amp;&amp; !this.value &amp;&amp; idx &gt; 0) {
+                    boxes[idx - 1].focus();
+                    }
+                    });
+                    boxes[idx].addEventListener('paste', function (e) {
+                    e.preventDefault();
+                    var cd = e.clipboardData || window.clipboardData;
+                    var text = cd.getData('text');
+                    var digits = text.replace(/[^0-9]/g, '').split('');
+                    for (var j = 0; j &lt; boxes.length; j++) {
+                    boxes[j].value = digits[j] || '';
+                    }
+                    combine();
+                    var lastIdx = Math.min(digits.length, boxes.length) - 1;
+                    if (lastIdx &gt;= 0) {
+                    boxes[lastIdx].focus();
+                    }
+                    });
+                    })(i);
+                    }
+
+                    form.addEventListener('submit', combine);
+                    if (boxes.length &gt; 0) {
+                    boxes[0].focus();
+                    }
+                    if (boxRow.getAttribute('data-error') === '1') {
+                    boxRow.classList.add('shake');
+                    }
+
+                    var otp_resend_seconds_remaining =<t t-out="resend_wait_seconds or 0"/>;
+                    (function () {
+                    var seconds = otp_resend_seconds_remaining;
+                    var btn = document.getElementById('otp_resend_btn');
+                    if (!btn || seconds &lt;= 0) {
+                    return;
+                    }
+                    function formatWait(totalSeconds) {
+                    if (totalSeconds &gt;= 60) {
+                    var m = Math.floor(totalSeconds / 60);
+                    var s = totalSeconds % 60;
+                    return m + 'm ' + (s &lt; 10 ? '0' : '') + s + 's';
+                    }
+                    return totalSeconds + 's';
+                    }
+                    function updateLabel() {
+                    btn.textContent = 'Resend code (' + formatWait(seconds) + ')';
+                    }
+                    updateLabel();
+                    var timer = setInterval(function () {
+                    seconds -= 1;
+                    if (seconds &lt;= 0) {
+                    clearInterval(timer);
+                    btn.disabled = false;
+                    btn.textContent = 'Resend code';
+                    return;
+                    }
+                    updateLabel();
+                    }, 1000);
+                    })();
+                </script>
+            </body>
+        </html>
+    </template>
+
+</odoo>

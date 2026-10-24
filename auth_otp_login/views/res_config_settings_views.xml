@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.auth.otp.login</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='user_default_rights']" position="after">
+                <block title="Email OTP Login" id="auth_otp_login_settings" groups="base.group_system">
+                    <setting id="otp_login_blocked_group_setting"
+                             string="Who is blocked from OTP login"
+                             help="Users in these groups will not be able to use the 'Login with Email OTP' option - they'll need their password. Leave empty to allow everyone.">
+                        <div class="content-group">
+                            <field name="otp_login_blocked_group_ids" widget="many2many_tags"
+                                   placeholder="No one blocked (everyone can use OTP)"/>
+                        </div>
+                    </setting>
+                    <setting id="otp_code_length_setting" string="Code length"
+                             title="Number of digits in each generated OTP code (4-10).">
+                        <field name="otp_code_length" class="w-25"/>
+                        <span>digits</span>
+                    </setting>
+                    <setting id="otp_validity_minutes_setting" string="Code validity"
+                             title="How long a code stays valid after being sent, in minutes (1-60).">
+                        <field name="otp_validity_minutes" class="w-25"/>
+                        <span>minutes</span>
+                    </setting>
+                    <setting id="otp_max_attempts_setting" string="Max verification attempts"
+                             title="Failed attempts allowed against one code before it is locked out (1-20).">
+                        <field name="otp_max_attempts" class="w-25"/>
+                        <span>attempts</span>
+                    </setting>
+                    <setting id="otp_resend_cooldown_setting" string="Resend cooldown"
+                             title="Minimum time between two consecutive OTP requests (10-3600 seconds).">
+                        <field name="otp_resend_cooldown_seconds" class="w-25"/>
+                        <span>seconds</span>
+                    </setting>
+                    <setting id="otp_max_requests_per_hour_setting" string="Max requests per hour"
+                             title="Maximum OTP requests allowed for one email within any rolling hour (1-100).">
+                        <field name="otp_max_requests_per_hour" class="w-25"/>
+                        <span>requests / hour</span>
+                    </setting>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

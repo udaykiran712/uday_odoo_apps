@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_res_users_otp_system,res.users.otp.system,model_res_users_otp,base.group_system,1,1,1,1
+access_auth_otp_unregistered_login_system,auth.otp.unregistered.login.system,model_auth_otp_unregistered_login,base.group_system,1,1,1,1
+access_auth_otp_restricted_login_system,auth.otp.restricted.login.system,model_auth_otp_restricted_login,base.group_system,1,1,1,1
