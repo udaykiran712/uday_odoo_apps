@@ -41,7 +41,12 @@ Security highlights
     'author': 'Gardas Udaykiran',
     'website': 'https://www.linkedin.com/in/udaykirangardas/',
     'license': 'LGPL-3',
-    'images': ['static/description/banner.png'],
+    'images': [
+        'static/description/banner.gif',
+        'static/description/banner_preview.gif',
+        'static/description/how_it_works.gif',
+        'static/description/security_banner.gif',
+    ],
     'depends': [
         'base',
         'base_setup',
